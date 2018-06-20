@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="" type="texture">
+  <paramGroup name="all">
+    <param name="compiler" value="TextureCompiler_D3DX.exe"/>
+    <param name="source"/>
+    <param name="textureType" value="2D"/>
+    <param name="storage" value="GPU"/>
+    <param name="format" value="DXT1"/>
+    <param name="maxWidth" value="4096"/>
+    <param name="maxHeight" value="4096"/>
+    <param name="maxDepth" value="256"/>
+    <param name="width" value="0"/>
+    <param name="height" value="0"/>
+    <param name="depth" value="0"/>
+    <param name="rescaleMethod" value="ToPreviousPowerOf2"/>
+    <param name="numLevels" value="0"/>
+    <param name="isNormalMap" value="false"/>
+    <param name="enableStreaming" value="false"/>
+    <param name="minLoadedLevels" value="5"/>
+    <param name="group" value="general"/>
+	<param name="isDynamic" value="false"/>
+	<param name="borderInAtlas" value="2"/>
+  </paramGroup>
+  <paramGroup name="marmalade">
+    <param name="storage" value="Original"/>
+	<param name="format" value="R8G8B8A8"/>
+	<param name="rescaleMethod" value="None"/>
+	<param name="numLevels" value="1"/>
+  </paramGroup>
+  <paramGroup name="marmalade-ios">
+    <param name="storage" value="Original"/>
+	<param name="format" value="R8G8B8A8"/>
+	<param name="rescaleMethod" value="None"/>
+	<param name="numLevels" value="1"/>
+  </paramGroup>
+  <paramGroup name="marmalade-android">
+    <param name="storage" value="Original"/>
+	<param name="format" value="R8G8B8A8"/>
+	<param name="rescaleMethod" value="None"/>
+	<param name="numLevels" value="1"/>
+  </paramGroup>
+  <paramGroup name="linux">
+    <param name="compiler" value="TextureCompiler_NVTT.run"/>
+  </paramGroup>
+  <paramGroup name="win32-gl">
+    <param name="compiler" value="TextureCompiler_NVTT.exe"/>
+  </paramGroup>
+  <paramGroup name="win32-gles">
+    <param name="storage" value="GPU"/>
+	<param name="format" value="R8G8B8A8"/>
+	<param name="rescaleMethod" value="None"/>
+  </paramGroup>
+  <paramGroup name="win32-d3d9">
+    <param name="compiler" value="TextureCompiler_D3DX.exe"/>
+  </paramGroup>
+  <paramGroup name="win32-d3d11">
+    <param name="compiler" value="TextureCompiler_D3DX.exe"/>
+  </paramGroup>
+  <paramGroup name="x360">
+    <param name="maxWidth" value="1024"/>
+    <param name="maxHeight" value="1024"/>
+    <param name="compiler" value="TextureCompiler_D3DX_X360.exe"/>
+  </paramGroup>
+  <paramGroup name="ps3">
+    <param name="maxWidth" value="512"/>
+    <param name="maxHeight" value="512"/>
+    <param name="compiler" value="TextureCompiler_D3DX_PS3.exe"/>
+  </paramGroup>
+</asset>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="asset_defs/model">
+  <paramGroup name="all">
+    <param name="source" value="postprocessing_sample/chair03.x"/>
+    <param name="makeStatic" value="true"/>
+  </paramGroup>
+  <paramGroup name="win32">
+    <param name="compiler" value="ModelCompiler_Assimp_Win32"/>
+  </paramGroup>
+  <paramGroup name="x360">
+    <param name="compiler" value="ModelCompiler_Assimp_X360"/>
+  </paramGroup>
+  <paramGroup name="ps3">
+    <param name="compiler" value="ModelCompiler_Assimp_PS3"/>
+  </paramGroup>
+</asset>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oor:component-data xmlns:oor="http://openoffice.org/2001/registry" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:install="http://openoffice.org/2004/installation" oor:name="Security" oor:package="org.openoffice.Office">
+  <node oor:name="SecureExtensions">
+    <node oor:name="m1" oor:op="replace">
+      <prop oor:name="Extension" oor:type="xs:string">
+        <value>sxw</value>
+      </prop>
+    </node>
+    <node oor:name="m2" oor:op="replace">
+      <prop oor:name="Extension" oor:type="xs:string">
+        <value>sxc</value>
+      </prop>
+    </node>
+    <node oor:name="m3" oor:op="replace">
+      <prop oor:name="Extension" oor:type="xs:string">
+        <value>sxd</value>
+      </prop>
+    </node>
+    <node oor:name="m4" oor:op="replace">
+      <prop oor:name="Extension" oor:type="xs:string">
+        <value>sxi</value>
+      </prop>
+    </node>
+    <node oor:name="m5" oor:op="replace">
+      <prop oor:name="Extension" oor:type="xs:string">
+        <value>sxm</value>
+      </prop>
+    </node>
+    <node oor:name="m6" oor:op="replace">
+      <prop oor:name="Extension" oor:type="xs:string">
+        <value>sxg</value>
+      </prop>
+    </node>
+    <node oor:name="m7" oor:op="replace">
+      <prop oor:name="Extension" oor:type="xs:string">
+        <value>sxp</value>
+      </prop>
+    </node>
+    <node oor:name="m8" oor:op="replace">
+      <prop oor:name="Extension" oor:type="xs:string">
+        <value>stw</value>
+      </prop>
+    </node>
+    <node oor:name="m9" oor:op="replace">
+      <prop oor:name="Extension" oor:type="xs:string">
+        <value>stc</value>
+      </prop>
+    </node>
+    <node oor:name="m10" oor:op="replace">
+      <prop oor:name="Extension" oor:type="xs:string">
+        <value>std</value>
+      </prop>
+    </node>
+    <node oor:name="m11" oor:op="replace">
+      <prop oor:name="Extension" oor:type="xs:string">
+        <value>sti</value>
+      </prop>
+    </node>
+    <node oor:name="m12" oor:op="replace">
+      <prop oor:name="Extension

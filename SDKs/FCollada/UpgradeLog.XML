@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="FCollada">
+</Property><Property Name="Solution File" Value="C:\FUN\projects\UE\SDKs\FCollada\FCollada.sln">
+</Property><Property Name="Date" Value="Monday, 5 September 2011">
+</Property><Property Name="Time" Value="12:01 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="FCollada.sln" Description="File successfully backed up as C:\FUN\projects\UE\SDKs\FCollada\FCollada.sln.old">
+</Event><Event ErrorLevel="0" Project="FCollada" Source="FCollada.vcproj" Description="Web deployment to the local IIS server is no longer supported. The Web Deployment build tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="FCollada" Source="FCollada.vcproj" Description="This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.">
+</Event><Event ErrorLevel="0" Project="FCollada" Source="FCollada.vcproj" Description="Project file successfully backed up as 'C:\FUN\projects\UE\SDKs\FCollada\FCollada.vcproj.8.00.old'.">
+</Event><Event ErrorLevel="0" Project="FCollada" Source="FCollada.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="FCollada" Source="FCollada.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="FColladaTest" Source="FColladaTest\FColladaTest.vcproj" Description="Web deployment to the local IIS server is no longer supported. The Web Deployment build tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="FColladaTest" Source="FColladaTest\FColladaTest.vcproj" Description="This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.">
+</Event><Event ErrorLevel="0" Project="FColladaTest" Source="FColladaTest\FColladaTest.vcproj" Description="Project file successfully backed up as 'C:\FUN\projects\UE\SDKs\FCollada\FColladaTest\FColladaTest.vcproj.8.00.old'.">
+</Event><Event ErrorLevel="0" Project="FColladaTest" Source="FColladaTest\FColladaTest.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="FColladaTest" Source="FColladaTest\FColladaTest.vcproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="LibXML" Source="LibXML\LibXML.vcproj" Description="This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.">
+</Event><Event ErrorLevel="0" Project="LibXML" Source="LibXML\LibXML.vcproj" Description="Project file successfully backed up as 'C:\FUN\projects\UE\SDKs\FCollada\LibXML\LibXML.vcproj.8.00.old'.">
+</Event><Event ErrorLevel="0" Project="LibXML" Source="LibXML\LibXML.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="LibXML" Source="LibXML\LibXML.vcproj" Description="Converted">
+</Event><Event ErrorLevel="1" Project="FArchiveXML" Source="FArchiveXML\FArchiveXML.vcproj" Description="This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.">
+</Event><Event ErrorLevel="0" Project="FArchiveXML" Source="FArchiveXML\FArchiveXML.vcproj" Description="Project file successfully backed up as 'C:\FUN\projects\UE\SDKs\FCollada\FArchiveXML\FArchiveXML.vcproj.8.00.old'.">
+</Event><Event ErrorLevel="0" Project="FArchiveXML" Source="FArchiveXML\FArchiveXML.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="FArchiveXML" Source="FArchiveXML\FArchiveXML.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="FCollada.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="FCollada.sln" Description="Converted">
+</Event></UpgradeLog>

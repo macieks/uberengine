@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="asset_defs/fragment_shader">
+  <paramGroup name="all">
+    <param name="source" value="mrt_sample/mrt_model_shaders.fx"/>
+    <param name="entry" value="mrt_model_fs"/>
+  </paramGroup>
+</asset>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="" type="model">
+  <paramGroup name="all">
+    <param name="source"/>
+    <param name="makeStatic" value="true"/>
+    <param name="removeDuplicateVertices" value="true"/>
+    <param name="preserveUnusedBones" value="false"/>
+    <param name="generateNormals" value="true"/>
+    <param name="generateUV0" value="true"/>
+    <param name="maxMeshBoxDim" value="1000000.0f"/>
+    <param name="minMeshTris" value="256"/>
+    <param name="maxMeshTris" value="21845"/> <!-- 65536 / 3 = 21845 (forces mesh to have 16-bit indices) -->
+    <param name="maxMeshBones" value="48"/>
+    <param name="exportCollisionGeometry" value="true"/>
+    <param name="scale" value="1 1 1"/>
+    <param name="translation" value="0 0 0"/>
+    <param name="rotationX" value="0"/>
+    <param name="rotationY" value="0"/>
+    <param name="rotationZ" value="0"/>
+  </paramGroup>
+  <paramGroup name="linux-bullet">
+    <param name="compiler" value="ModelCompiler_Assimp.run"/>
+    <param name="physicsCompiler" value="PhysicsCompiler_Bullet.so"/>
+    <param name="noFloat16" value="true"/>
+  </paramGroup>
+  <paramGroup name="win32-physx-gl">
+    <param name="compiler" value="ModelCompiler_Assimp.exe"/>
+    <param name="physicsCompiler" value="PhysicsCompiler_PhysX.dll"/>
+    <param name="noFloat16" value="true"/>
+  </paramGroup>
+  <paramGroup name="win32-bullet-gl">
+    <param name="compiler" value="ModelCompiler_Assimp.exe"/>
+    <param name="physicsCompiler" value="PhysicsCompiler_Bullet.dll"/>
+    <param name="noFloat16" value="true"/>
+  </paramGroup>
+  <paramGroup name="win32-physx-d3d9">
+    <param name="compiler" value="ModelCompiler_Assimp.exe"/>
+    <param name="physicsCompiler" value="PhysicsCompiler_PhysX.dll"/>
+  </paramGroup>
+  <paramGroup name="win32-physx-d3d11">
+    <param name="compiler" value="ModelCompiler_Assimp.exe"/>
+    <param name="physicsCompiler" value="PhysicsCompiler_PhysX.dll"/>
+  </paramGroup>
+  <paramGroup name="win32-bullet-d3d9">
+    <param name="compiler" value="ModelCompiler_Assimp.exe"/>
+    <param name="physicsCompiler" value="PhysicsCompiler_Bullet.dll"/>
+  </paramGroup>
+  <paramGroup name="x360-physx">
+    <param name="compiler" value="ModelCompiler_Assimp_X360.exe"/>
+    <param name="physicsCompiler" value="PhysicsCompiler_PhysX_X360.dll"/>
+  </paramGroup>
+  <paramGroup name="ps3-physx">
+    <param name="compiler" value="ModelCompiler_Assimp_PS3.exe"/>
+    <param name="physicsCompiler" value="PhysicsCompiler_PhysX_PS3.dll"/>
+  </paramGroup>
+</asset>

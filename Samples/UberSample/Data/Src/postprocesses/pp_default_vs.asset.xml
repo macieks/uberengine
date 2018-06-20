@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="asset_defs/vertex_shader">
+  <paramGroup name="all">
+    <param name="source" value="postprocesses/pp_common.fx"/>
+    <param name="entry" value="pp_default_vs"/>
+  </paramGroup>
+</asset>

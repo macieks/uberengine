@@ -1,0 +1,14 @@
+MUI_386_OBJECTS=
+
+386_OBJECTS= \
+ $(OBJ_PATH)\$O\dummy.obj
+
+
+
+
+# lowercased
+BASEDIR=h:\polaris
+OBJECT_ROOT=h:\polaris.obj.x86fre
+MAKEDIR_LOWERCASE=h:\polaris\multimedia\wmdm\psdk\lib
+MAKEDIR_RELATIVE_TO_BASEDIR=multimedia\wmdm\psdk\lib
+OBJ_PATH=h:\polaris.obj.x86fre\multimedia\wmdm\psdk\lib

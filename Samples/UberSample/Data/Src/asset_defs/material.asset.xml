@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="" type="material">
+  <material>
+    <configs>
+      <config name="depth pre-pass" vertexShader="common/depth_view_space_vs" fragmentShader="common/depth_view_space_fs"/>
+      <config name="color" vertexShader="common/model_vs" fragmentShader="common/model_fs"/>
+    </configs>
+    <overridableParams>
+      <param name="Color" type="float4" count="1" defaultValue="1 1 1 1"/>
+      <param name="ColorMap" type="sampler" count="1" defaultValue="common/default_texture"/>
+    </overridableParams>
+  </material>
+</asset>

@@ -1,0 +1,263 @@
+//
+//  Microsoft Windows Media Technologies
+//  Copyright (c) Microsoft Corporation. All rights reserved.
+//
+
+cpp_quote("// SCP Data Flags")
+cpp_quote("#define WMDM_SCP_EXAMINE_EXTENSION                 0x00000001L")
+cpp_quote("#define WMDM_SCP_EXAMINE_DATA                      0x00000002L")
+cpp_quote("#define WMDM_SCP_DECIDE_DATA                       0x00000008L")
+cpp_quote("#define WMDM_SCP_PROTECTED_OUTPUT                  0x00000010L")
+cpp_quote("#define WMDM_SCP_UNPROTECTED_OUTPUT                0x00000020L")
+cpp_quote("#define WMDM_SCP_RIGHTS_DATA                       0x00000040L")
+
+cpp_quote("// SCP Transfer Flags")
+cpp_quote("#define WMDM_SCP_TRANSFER_OBJECTDATA               0x00000020L")
+cpp_quote("#define WMDM_SCP_NO_MORE_CHANGES                   0x00000040L")
+
+cpp_quote("// SCP DRMINFO Flags")
+cpp_quote("#define WMDM_SCP_DRMINFO_NOT_DRMPROTECTED          0x00000000L")
+cpp_quote("#define WMDM_SCP_DRMINFO_V1HEADER                  0x00000001L")
+cpp_quote("#define WMDM_SCP_DRMINFO_V2HEADER                  0x00000002L")
+
+
+cpp_quote("#ifndef _DEFINE_SCP_EVENTID")
+cpp_quote("#define _DEFINE_SCP_EVENTID")
+
+cpp_quote("// {86248CC9-4A59-43e2-9146-48A7F3F4140C}")
+cpp_quote("// this event ID is used when SCP is acquiring secure clock from server")
+cpp_quote("DEFINE_GUID(SCP_EVENTID_ACQSECURECLOCK, ")
+cpp_quote("0x86248cc9, 0x4a59, 0x43e2, 0x91, 0x46, 0x48, 0xa7, 0xf3, 0xf4, 0x14, 0xc);")
+
+cpp_quote("//")
+cpp_quote("// {87A507C7-B469-4386-B976-D5D1CE538A6F}")
+cpp_quote("DEFINE_GUID(SCP_EVENTID_NEEDTOINDIV, ")
+cpp_quote("0x87a507c7, 0xb469, 0x4386, 0xb9, 0x76, 0xd5, 0xd1, 0xce, 0x53, 0x8a, 0x6f);")
+
+cpp_quote("// this event ID is used to notify the player the version DRM header found in the content")
+cpp_quote("// {213DD287-41D2-432b-9E3F-3B4F7B3581DD}")
+cpp_quote("DEFINE_GUID(SCP_EVENTID_DRMINFO, ") 
+cpp_quote("0x213dd287, 0x41d2, 0x432b, 0x9e, 0x3f, 0x3b, 0x4f, 0x7b, 0x35, 0x81, 0xdd);")
+
+cpp_quote("// this parameter ID is used when notifying SCP_EVENTID_DRMINFO message")
+cpp_quote("// {41D0155D-7CC7-4217-ADA9-005074624DA4}")
+cpp_quote("DEFINE_GUID(SCP_PARAMID_DRMVERSION, ")
+cpp_quote("0x41d0155d, 0x7cc7, 0x4217, 0xad, 0xa9, 0x00, 0x50, 0x74, 0x62, 0x4d, 0xa4);")
+cpp_quote("#endif")
+
+interface ISCPSecureExchange;
+interface ISCPSecureQuery;
+interface ISCPSecureQuery2;
+interface ISCPSession;
+
+// ISCPSecureAuthenticate
+[
+    object,
+    uuid(1DCB3A0F-33ED-11d3-8470-00C04F79DBC0),
+    pointer_default(unique)
+]
+interface ISCPSecureAuthenticate : IUnknown
+{
+    HRESULT GetSecureQuery([out] ISCPSecureQuery **ppSecureQuery);
+};
+
+// ISCPSecureAuthenticate2
+[
+    object,
+    uuid(B580CFAE-1672-47e2-ACAA-44BBECBCAE5B),
+    pointer_default(unique)
+]
+interface ISCPSecureAuthenticate2 : ISCPSecureAuthenticate
+{
+    HRESULT GetSCPSession([out] ISCPSession **ppSCPSession);
+};
+
+
+// ISCPSecureQuery
+[
+    object,
+    uuid(1DCB3A0D-33ED-11d3-8470-00C04F79DBC0),
+    pointer_default(unique)
+]
+interface ISCPSecureQuery : IUnknown
+{
+    HRESULT GetDataDemands([out] UINT *pfuFlags,
+                           [out] DWORD *pdwMinRightsData,
+                           [out] DWORD *pdwMinExamineData,
+                           [out] DWORD *pdwMinDecideData,
+                           [in, out] BYTE abMac[WMDM_MAC_LENGTH]);
+    HRESULT ExamineData([in] UINT fuFlags,
+                        [in, string, unique] LPWSTR pwszExtension,
+                        [in, size_is(dwSize)] BYTE *pData,
+                        [in] DWORD dwSize,
+                        [in, out] BYTE abMac[WMDM_MAC_LENGTH]);
+    HRESULT MakeDecision([in] UINT fuFlags,
+                         [in, size_is(dwSize)] BYTE *pData,
+                         [in] DWORD dwSize,
+                         [in] DWORD dwAppSec,
+                         [in, size_is(dwSessionKeyLen)] BYTE *pbSPSessionKey,
+                         [in] DWORD dwSessionKeyLen,
+                         [in] IMDSPStorageGlobals *pStorageGlobals,
+                         [out] ISCPSecureExchange **ppExchange,
+                         [in, out] BYTE abMac[WMDM_MAC_LENGTH]);
+    HRESULT GetRights([in, size_is(dwSize)] BYTE *pData,
+                      [in] DWORD dwSize,
+                      [in, size_is(dwSessionKeyLen)] BYTE *pbSPSessionKey,
+                      [in] DWORD dwSessionKeyLen,
+                      [in] IMDSPStorageGlobals *pStgGlobals,
+                      [out, size_is(, *pnRightsCount)] PWMDMRIGHTS *ppRights,
+                      [out] UINT *pnRightsCount,
+                      [in, out] BYTE abMac[WMDM_MAC_LENGTH]);
+};
+
+// ISCPSecureQuery2
+[
+    object,
+    uuid(EBE17E25-4FD7-4632-AF46-6D93D4FCC72E),
+    pointer_default(unique)
+]
+interface ISCPSecureQuery2 : ISCPSecureQuery
+{
+    HRESULT MakeDecision2([in] UINT fuFlags,
+                          [in, size_is(dwSize)] BYTE *pData,
+                          [in] DWORD dwSize,
+                          [in] DWORD dwAppSec,
+                          [in, size_is(dwSessionKeyLen)] BYTE *pbSPSessionKey,
+                          [in] DWORD dwSessionKeyLen,
+                          [in] IMDSPStorageGlobals *pStorageGlobals,
+                          [in, size_is(dwAppCertAppLen)] BYTE* pAppCertApp,
+                          [in] DWORD dwAppCertAppLen,
+                          [in, size_is(dwAppCertSPLen)] BYTE* pAppCertSP,
+                          [in] DWORD dwAppCertSPLen,
+                          [in, out, string, size_is(, *pdwRevocationURLLen)] LPWSTR* pszRevocationURL,
+                          [in, out, ref] DWORD*  pdwRevocationURLLen,
+                          [out] DWORD* pdwRevocationBitFlag, 
+                          [in, out, unique] ULONGLONG* pqwFileSize,
+                          [in] IUnknown* pUnknown,
+                          [out] ISCPSecureExchange **ppExchange,
+                          [in, out] BYTE abMac[WMDM_MAC_LENGTH]);
+};
+
+
+// ISCPSecureEchange
+[
+    object,
+    uuid(1DCB3A0E-33ED-11d3-8470-00C04F79DBC0),
+    pointer_default(unique)
+]
+interface ISCPSecureExchange : IUnknown
+{
+    HRESULT TransferContainerData([in,size_is(dwSize)] BYTE *pData,
+                                  [in] DWORD dwSize,
+                                  [out] UINT *pfuReadyFlags,
+                                  [in, out] BYTE abMac[WMDM_MAC_LENGTH]);
+    HRESULT ObjectData([out,size_is(*pdwSize)] BYTE *pData,
+                       [in, out] DWORD *pdwSize,
+                       [in, out] BYTE abMac[WMDM_MAC_LENGTH]);
+    HRESULT TransferComplete(); 
+};
+
+// ISCPSecureExchange2
+[
+    object,
+    uuid(6C62FC7B-2690-483F-9D44-0A20CB35577C),
+    pointer_default(unique)
+]
+interface ISCPSecureExchange2 : ISCPSecureExchange
+{
+    HRESULT TransferContainerData2([in,size_is(dwSize)] BYTE *pData,
+                                  [in] DWORD dwSize,
+                                  [in] IWMDMProgress3 *pProgressCallback,
+                                  [out] UINT *pfuReadyFlags,
+                                  [in, out] BYTE abMac[WMDM_MAC_LENGTH]);
+};
+
+// ISCPSecureExchange3
+[
+    object,
+    uuid(ab4e77e4-8908-4b17-bd2a-b1dbe6dd69e1),
+    pointer_default(unique)
+]
+interface ISCPSecureExchange3 : ISCPSecureExchange2
+{
+    HRESULT TransferContainerDataOnClearChannel(  [in] IMDSPDevice *pDevice,
+                                                  [in,size_is(dwSize)] BYTE *pData,
+                                                  [in] DWORD dwSize,
+                                                  [in] IWMDMProgress3 *pProgressCallback,
+                                                  [out] UINT *pfuReadyFlags);
+
+    HRESULT GetObjectDataOnClearChannel(    [in] IMDSPDevice *pDevice,
+                                            [out,size_is(*pdwSize)] BYTE *pData,
+                                            [in, out] DWORD *pdwSize);
+
+    HRESULT TransferCompleteForDevice ([in] IMDSPDevice *pDevice);
+};
+
+
+// ISCPSession
+[
+    object,
+    uuid(88a3e6ed-eee4-4619-bbb3-fd4fb62715d1),
+    pointer_default(unique)
+]
+interface ISCPSession : IUnknown
+{
+    //
+    // Indicates beginning of a transfer session
+    // This can be used to optimize things that need to be done only once per transfer
+    // session. This includes querying of device certificate and such
+    //
+    HRESULT BeginSession (  [in] IMDSPDevice * pIDevice,
+                            [in, size_is(dwSizeCtx)] BYTE * pCtx,
+                            [in] DWORD dwSizeCtx);
+    //
+    // Indicates end of a transfer session
+    //
+    HRESULT EndSession (    [in, size_is(dwSizeCtx)] BYTE * pCtx,
+                            [in] DWORD dwSizeCtx);
+
+    // Within a session, an instance of ISCPSecureQuery is needed per content transfer.
+    // This method instantiates an instance of such.
+    HRESULT GetSecureQuery([out] ISCPSecureQuery **ppSecureQuery);
+                            
+};
+
+
+// ISCPSecureQuery3
+[
+    object,
+    uuid(B7EDD1A2-4DAB-484b-B3C5-AD39B8B4C0B1),
+    pointer_default(unique)
+]
+interface ISCPSecureQuery3 : ISCPSecureQuery2 
+{
+    HRESULT GetRightsOnClearChannel(
+        [in, size_is(dwSize)] BYTE *pData,
+        [in] DWORD dwSize,
+        [in, size_is(dwSessionKeyLen)] BYTE *pbSPSessionKey,
+        [in] DWORD dwSessionKeyLen,
+        [in] IMDSPStorageGlobals *pStgGlobals,
+        [in] IWMDMProgress3 *pProgressCallback,
+        [out, size_is(, *pnRightsCount)] PWMDMRIGHTS *ppRights,
+        [out] UINT *pnRightsCount);
+ 
+    HRESULT MakeDecisionOnClearChannel(
+        [in] UINT fuFlags,
+        [in, size_is(dwSize)] BYTE *pData,
+        [in] DWORD dwSize,
+        [in] DWORD dwAppSec,
+        [in, size_is(dwSessionKeyLen)] BYTE *pbSPSessionKey,
+        [in] DWORD dwSessionKeyLen,
+        [in] IMDSPStorageGlobals *pStorageGlobals,
+        [in] IWMDMProgress3 *pProgressCallback,
+        [in, size_is(dwAppCertAppLen)] BYTE* pAppCertApp,
+        [in] DWORD dwAppCertAppLen,
+        [in, size_is(dwAppCertSPLen)] BYTE* pAppCertSP,
+        [in] DWORD dwAppCertSPLen,
+        [in, out, string, size_is(, *pdwRevocationURLLen)] LPWSTR* pszRevocationURL,
+        [in, out, ref] DWORD*  pdwRevocationURLLen,
+        [out] DWORD* pdwRevocationBitFlag, 
+        [in, out, unique] ULONGLONG* pqwFileSize,
+        [in] IUnknown* pUnknown,
+        [out] ISCPSecureExchange **ppExchange);
+};

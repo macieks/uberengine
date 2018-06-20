@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="asset_defs/fragment_shader">
+  <paramGroup name="all">
+    <param name="source" value="postprocesses/pp_depth_of_field_hq.fx"/>
+    <param name="entry" value="pp_depth_of_field_hq_composite_fs"/>
+  </paramGroup>
+</asset>

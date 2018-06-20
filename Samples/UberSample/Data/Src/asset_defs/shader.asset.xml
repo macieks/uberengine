@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="" type="shader">
+  <paramGroup name="all">
+    <param name="source"/>
+    <param name="entry"/>
+    <param name="profile"/>
+  </paramGroup>
+  <paramGroup name="linux-glsl">
+    <param name="compiler" value="ShaderCompiler_Cg.run"/>
+    <param name="macros" value="LINUX;CG;OPENGL"/>
+  </paramGroup>
+  <paramGroup name="win32-glsl">
+    <param name="compiler" value="ShaderCompiler_Cg.exe"/>
+    <param name="macros" value="WIN32;CG;OPENGL"/>
+  </paramGroup>
+  <paramGroup name="win32-d3d9_sm30">
+    <param name="compiler" value="ShaderCompiler_D3D9.exe"/>
+    <param name="macros" value="WIN32;D3D9;SM30"/>
+  </paramGroup>
+  <paramGroup name="win32-d3d9_sm20">
+    <param name="compiler" value="ShaderCompiler_D3D9.exe"/>
+    <param name="macros" value="WIN32;D3D9;SM20"/>
+  </paramGroup>
+  <paramGroup name="win32-d3d9_sm14">
+    <param name="compiler" value="ShaderCompiler_D3D9.exe"/>
+    <param name="macros" value="WIN32;D3D9;SM14"/>
+  </paramGroup>
+  <paramGroup name="win32-d3d11_sm40">
+    <param name="compiler" value="ShaderCompiler_D3D11.exe"/>
+    <param name="macros" value="WIN32;D3D11;SM40"/>
+    <param name="enableDX9Compatibility" value="true"/>
+  </paramGroup>
+  <paramGroup name="x360">
+    <param name="compiler" value="ShaderCompiler_X360.exe"/>
+    <param name="macros" value="X360"/>
+  </paramGroup>
+  <paramGroup name="ps3">
+    <param name="compiler" value="ShaderCompiler_PS3"/>
+    <param name="macros" value="PS3"/>
+  </paramGroup>
+  <paramGroup name="marmalade-gles">
+    <param name="compiler" value="ShaderCompiler_Cg.exe"/>
+    <param name="macros" value="CG;OPENGL"/>
+  </paramGroup>
+  <paramGroup name="win32-gles">
+    <param name="compiler" value="ShaderCompiler_Cg.exe"/>
+    <param name="macros" value="CG;OPENGL"/>
+  </paramGroup>
+</asset>

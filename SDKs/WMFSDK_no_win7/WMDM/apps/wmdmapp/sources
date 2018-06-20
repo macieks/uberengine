@@ -1,0 +1,72 @@
+!include $(WMDMROOT)\common.inc
+
+TARGETNAME=WMDMAPP
+TARGETTYPE=PROGRAM
+
+# SDK sample code not part of the OS, different requirements apply
+TEST_CODE = 1
+
+WIN32_WINNT_VERSION=0x501
+_NT_TARGET_VERSION=$(_NT_TARGET_VERSION_WINXP)
+
+UNICODE=1
+NOT_LEAN_AND_MEAN=1
+USE_MSVCRT=1
+UMTYPE=windows
+UMENTRY=winmain
+C_DEFINES=$(C_DEFINES) -DSTRICT -DUNICODE -D_UNICODE
+MUI=0
+
+USE_ATL=1
+ATL_VER=70
+
+# Remove for free build
+#C_DEFINES=$(C_DEFINES) -DDEBUG -D_DEBUG 
+#DEBUG_CRTS=1
+#MSC_OPTIMIZATION=/Od
+
+SOURCES =   \
+        key.c \
+        wmdevmgr.cpp \
+        wmdmapp.cpp \
+        devfiles.cpp \
+        devices.cpp \
+        itemdata.cpp \
+        progress.cpp \
+        status.cpp \
+        util.cpp \
+        wmdmapp.rc \
+        properties.cpp \
+        NotificationHandler.cpp \
+        guiddef.cpp
+
+PROGHELP_IDL_INC_PATH = $(OBJ_PATH)\..\proghelp\$O;
+
+INCLUDES=                \
+    $(PROGHELP_IDL_INC_PATH); \
+    $(WMDM_INC_PATH); \
+    $(SDK_INC_PATH)\atl30; \
+    $(SDK_INC_PATH); \
+    $(SDK_INC_PATH)\gdiplus;
+
+TARGETLIBS = \
+    $(DRMLIBS)                                     \
+    $(SDK_LIB_PATH)\advapi32.lib                \
+    $(SDK_LIB_PATH)\comctl32.lib                \
+    $(SDK_LIB_PATH)\comdlg32.lib                \
+    $(SDK_LIB_PATH)\kernel32.lib                \
+    $(SDK_LIB_PATH)\ole32.lib                   \
+    $(SDK_LIB_PATH)\oleaut32.lib                \
+    $(SDK_LIB_PATH)\user32.lib                  \
+    $(SDK_LIB_PATH)\shell32.lib                 \
+    $(SDK_LIB_PATH)\uuid.lib                    \
+    $(SDK_LIB_PATH)\winspool.lib                \
+    $(SDK_LIB_PATH)\odbc32.lib                  \
+    $(SDK_LIB_PATH)\odbccp32.lib                \
+    $(SDK_LIB_PATH)\shlwapi.lib                 \
+    $(SDK_LIB_PATH)\wmvcore.lib                 \
+    $(SDK_LIB_PATH)\gdiplus.lib                 
+    
+
+
+MUI_COMMENT=TO_COMMENT, old disabled, owners need to contact MUICore to get new comment and comment code

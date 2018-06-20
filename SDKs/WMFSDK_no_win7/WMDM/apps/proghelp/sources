@@ -1,0 +1,42 @@
+!include $(WMDMROOT)\common.inc
+
+TARGETNAME=PROGHELP
+TARGETPATH=$(WMDMOUTDIR)
+TARGETTYPE=DYNLINK
+
+# SDK sample code not part of the OS, different requirements apply
+TEST_CODE = 1
+
+DLLENTRY=_DllMainCRTStartup
+
+UMTYPE=windows
+C_DEFINES=$(C_DEFINES) -DINC_OLE2 -D_ATL_STATIC_REGISTRY
+
+USE_MSVCRT=1
+
+IDL_TYPE=OLE
+
+SOURCES =   \
+	WMDMProgressHelper.idl \
+	WMDMOperationHelper.idl \
+	ProgHelp.idl \
+	progpch.cpp \
+	ProgHelp.cpp \
+	OperationHelper.cpp \
+	ProgressHelper.cpp \
+	ProgHelp.rc \
+
+INCLUDES=                \
+    $(SDK_INC_PATH)\atl30;  \
+    $(EXT_INC_PATH); \
+    $(WMDM_INC_PATH);
+
+TARGETLIBS = \
+    $(SDK_LIB_PATH)\advapi32.lib                \
+    $(SDK_LIB_PATH)\kernel32.lib                \
+    $(SDK_LIB_PATH)\ole32.lib                   \
+    $(SDK_LIB_PATH)\oleaut32.lib                \
+    $(SDK_LIB_PATH)\user32.lib                  \
+    $(SDK_LIB_PATH)\shell32.lib                 \
+    $(SDK_LIB_PATH)\uuid.lib                    \
+    $(DRMLIBS)                                  

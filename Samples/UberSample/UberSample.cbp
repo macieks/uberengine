@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="UberSample" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug Win32">
+				<Option output="UberSample" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../../Obj/UberSample/Linux_Debug Win32" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-D_DEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add option="-W" />
+					<Add option="-g" />
+					<Add option="-O0" />
+					<Add directory="../../Src/Engine" />
+					<Add directory="./Src" />
+					<Add directory="../../SDKs/Box2D" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="../../Src/Engine" />
+					<Add directory="./Src" />
+					<Add directory="../../SDKs/Box2D" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="winmm" />
+					<Add library="wmvcore" />
+					<Add library="enet" />
+					<Add library="ws2_32" />
+					<Add library="x3daudio" />
+					<Add library="d3d9" />
+					<Add library="d3dx9" />
+					<Add library="shlwapi" />
+					<Add library="libbulletcollision_d" />
+					<Add library="libbulletdynamics_d" />
+					<Add library="libbulletmath_d" />
+					<Add library="libbulletsoftbody_d" />
+					<Add library="NxCharacter" />
+					<Add library="PhysXCooking" />
+					<Add library="PhysXLoader" />
+					<Add library="Box2D" />
+					<Add library="zdll" />
+					<Add library="zziplib-Debug" />
+					<Add library="avcodec-52" />
+					<Add library="avdevice-52" />
+					<Add library="avformat-52" />
+					<Add library="avutil-49" />
+					<Add library="swscale-0" />
+					<Add directory="../../SDKs/Bullet/out/debug8/libs" />
+					<Add directory="../../SDKs/zziplib/msvc8" />
+					<Add directory="../../SDKs/zlib/lib" />
+					<Add directory="../../SDKs/WMFSDK/lib" />
+					<Add directory="../../SDKs/ffmpeg/lib" />
+					<Add directory="../../SDKs/enet/Debug" />
+					<Add directory="../../SDKs/PhysX/lib/win32" />
+					<Add directory="../../SDKs/Box2D/lib/win32/debug" />
+				</Linker>
+				<ExtraCommands>
+					<Add before="..\..\bin\win32_debug\AssetCompiler.exe -config win32;d3d9_sm30 -source ..\..\Samples\UberSample\Data\Src\uber_sample_assets" />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release Win32">
+				<Option output="UberSample" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../../Obj/UberSample/Linux_Release Win32" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-DWIN32" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add option="-W" />
+					<Add directory="../../Src/Engine" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="../../Src/Engine" />
+				</ResourceCompiler>
+			</Target>
+		</Build>
+		<Unit filename="Data/Src/uber_sample_assets.xml" />
+		<Unit filename="Data/Src/UberSampleConfig.txt" />
+		<Unit filename="Data/Src/asset_defs/animation.asset.xml" />
+		<Unit filename="Data/Src/asset_defs/debug_shader.asset.xml" />
+		<Unit filename="Data/Src/asset_defs/debug_texture.asset.xml" />
+		<Unit filename="Data/Src/asset_defs/effect.asset.xml" />
+		<Unit filename="Data/Src/asset_defs/font.asset.xml" />
+		<Unit filename="Data/Src/asset_defs/model.asset.xml" />
+		<Unit filename="Data/Src/asset_defs/shader.asset.xml" />
+		<Unit filename="Data/Src/asset_defs/texture.asset.xml" />
+		<Unit filename="Data/Src/movie_sample/test_movie.wmv" />
+		<Unit filename="Data/Src/polygon_sample/test_texture.asset.xml" />
+		<Unit filename="Data/Src/polygon_sample/test_texture.png" />
+		<Unit filename="Data/Src/rts_sample/axe.jpg" />
+		<Unit filename="Data/Src/rts_sample/detailmap.asset.xml" />
+		<Unit filename="Data/Src/rts_sample/detailmap.jpg" />
+		<Unit filename="Data/Src/rts_sample/dwarf animation ranges.txt" />
+		<Unit filename="Data/Src/rts_sample/dwarf.jpg" />
+		<Unit filename="Data/Src/rts_sample/dwarf1.ms3d" />
+		<Unit filename="Data/Src/rts_sample/dwarf1.x" />
+		<Unit filename="Data/Src/rts_sample/rts_sample_assets.xml" />
+		<Unit filename="Data/Src/rts_sample/rts_sample_shaders.fx" />
+		<Unit filename="Data/Src/rts_sample/soldier.asset.xml" />
+		<Unit filename="Data/Src/rts_sample/soldiermap0.asset.xml" />
+		<Unit filename="Data/Src/rts_sample/soldiermap1.asset.xml" />
+		<Unit filename="Data/Src/rts_sample/terrain0.asset.xml" />
+		<Unit filename="Data/Src/rts_sample/terrain0.PNG" />
+		<Unit filename="Data/Src/rts_sample/terrain1.asset.xml" />
+		<Unit filename="Data/Src/rts_sample/terrain1.PNG" />
+		<Unit filename="Data/Src/rts_sample/terrain2.asset.xml" />
+		<Unit filename="Data/Src/rts_sample/terrain2.PNG" />
+		<Unit filename="Data/Src/rts_sample/terrain_fs.asset.xml" />
+		<Unit filename="Data/Src/rts_sample/terrain_vs.asset.xml" />
+		<Unit filename="Data/Src/rts_sample/walk_anim.asset.xml" />
+		<Unit filename="Data/Src/model_sample/jaiqua_red21a.png" />
+		<Unit filename="Data/Src/model_sample/JaiquaFromXSI.dae" />
+		<Unit filename="Data/Src/model_sample/test_anim.asset.xml" />
+		<Unit filename="Data/Src/model_sample/test_model.asset.xml" />
+		<Unit filename="Data/Src/model_sample/test_tex.asset.xml" />
+		<Unit filename="Data/Src/localization_sample/TestTexts_EN.loca" />
+		<Unit filename="Data/Src/localization_sample/TestTexts_PL.loca" />
+		<Unit filename="Data/Src/quake3_level_sample/q3dm3.bsp" />
+		<Unit filename="Data/Src/quake3_level_sample/quake3_level.asset.xml" />
+		<Unit filename="Data/Src/quake3_level_sample/test_level.asset.xml" />
+		<Unit filename="Data/Src/Common/common_assets.xml" />
+		<Unit filename="Data/Src/Common/debug_font.asset.xml" />
+		<Unit filename="Data/Src/Common/debug_shaders.fx" />
+		<Unit filename="Data/Src/common/depth_view_space_fs.asset.xml" />
+		<Unit filename="Data/Src/common/depth_view_space_vs.asset.xml" />
+		<Unit filename="Data/Src/Common/font.asset.xml" />
+		<Unit filename="Data/Src/Common/font_fs.asset.xml" />
+		<Unit filename="Data/Src/Common/font_vs.asset.xml" />
+		<Unit filename="Data/Src/Common/model_fs.asset.xml" />
+		<Unit filename="Data/Src/Common/model_shaders.fx" />
+		<Unit filename="Data/Src/Common/model_skinned_vs.asset.xml" />
+		<Unit filename="Data/Src/Common/model_vs.asset.xml" />
+		<Unit filename="Data/Src/Common/pos_col_fs.asset.xml" />
+		<Unit filename="Data/Src/Common/pos_col_tex_fs.asset.xml" />
+		<Unit filename="Data/Src/Common/pos_col_tex_vs.asset.xml" />
+		<Unit filename="Data/Src/Common/pos_col_vs.asset.xml" />
+		<Unit filename="Data/Src/common/pos_no_transform_vs.asset.xml" />
+		<Unit filename="Data/Src/common/pos_tex_fs.asset.xml" />
+		<Unit filename="Data/Src/common/pos_tex_no_transform_vs.asset.xml" />
+		<Unit filename="Data/Src/common/pos_tex_vs.asset.xml" />
+		<Unit filename="Data/Src/online_leaderboards/best_timers.query.xml" />
+		<Unit filename="Data/Src/postprocessing_sample/chair03.X" />
+		<Unit filename="Data/Src/postprocessing_sample/chair_model.asset.xml" />
+		<Unit filename="Data/Src/postprocessing_sample/chair_tex.asset.xml" />
+		<Unit filename="Data/Src/postprocessing_sample/fs1205-sc.jpg" />
+		<Unit filename="Data/Src/postprocesses/postprocesses_assets.xml" />
+		<Unit filename="Data/Src/postprocesses/pp_bloom.fx" />
+		<Unit filename="Data/Src/postprocesses/pp_bloom_composite_fs.asset.xml" />
+		<Unit filename="Data/Src/postprocesses/pp_blur.fx" />
+		<Unit filename="Data/Src/postprocesses/pp_camera_motion_blur.fx" />
+		<Unit filename="Data/Src/postprocesses/pp_camera_motion_blur_fs.asset.xml" />
+		<Unit filename="Data/Src/postprocesses/pp_common.fx" />
+		<Unit filename="Data/Src/postprocesses/pp_default_vs.asset.xml" />
+		<Unit filename="Data/Src/postprocesses/pp_depth_of_field.fx" />
+		<Unit filename="Data/Src/postprocesses/pp_depth_of_field_fs.asset.xml" />
+		<Unit filename="Data/Src/postprocesses/pp_depth_of_field_hq.fx" />
+		<Unit filename="Data/Src/postprocesses/pp_depth_of_field_hq_composite_fs.asset.xml" />
+		<Unit filename="Data/Src/postprocesses/pp_depth_of_field_hq_downsample_fs.asset.xml" />
+		<Unit filename="Data/Src/postprocesses/pp_depth_of_field_hq_downsample_vs.asset.xml" />
+		<Unit filename="Data/Src/postprocesses/pp_depth_of_field_hq_near_coc_fs.asset.xml" />
+		<Unit filename="Data/Src/postprocesses/pp_depth_of_field_hq_small_blur_fs.asset.xml" />
+		<Unit filename="Data/Src/postprocesses/pp_depth_of_field_hq_small_blur_vs.asset.xml" />
+		<Unit filename="Data/Src/postprocesses/pp_down2x2.fx" />
+		<Unit filename="Data/Src/postprocesses/pp_down2x2_fs.asset.xml" />
+		<Unit filename="Data/Src/postprocesses/pp_down2x2_vs.asset.xml" />
+		<Unit filename="Data/Src/postprocesses/pp_horizontal_blur_fs.asset.xml" />
+		<Unit filename="Data/Src/postprocesses/pp_old_tv.fx" />
+		<Unit filename="Data/Src/postprocesses/pp_old_tv_dust.dds" />
+		<Unit filename="Data/Src/postprocesses/pp_old_tv_dust_map.asset.xml" />
+		<Unit filename="Data/Src/postprocesses/pp_old_tv_fs.asset.xml" />
+		<Unit filename="Data/Src/postprocesses/pp_old_tv_line.dds" />
+		<Unit filename="Data/Src/postprocesses/pp_old_tv_line_map.asset.xml" />
+		<Unit filename="Data/Src/postprocesses/pp_old_tv_tv_and_noise.dds" />
+		<Unit filename="Data/Src/postprocesses/pp_old_tv_tv_and_noise_map.asset.xml" />
+		<Unit filename="Data/Src/postprocesses/pp_old_tv_vs.asset.xml" />
+		<Unit filename="Data/Src/postprocesses/pp_rainy_glass.fx" />
+		<Unit filename="Data/Src/postprocesses/pp_rainy_glass_distortion_fs.asset.xml" />
+		<Unit filename="Data/Src/postprocesses/pp_rainy_glass_droplet.asset.xml" />
+		<Unit filename="Data/Src/postprocesses/pp_rainy_glass_droplet.png" />
+		<Unit filename="Data/Src/postprocesses/pp_rainy_glass_evaporation_fs.asset.xml" />
+		<Unit filename="Data/Src/postprocesses/pp_vertical_blur_fs.asset.xml" />
+		<Unit filename="Src/Sample.cpp" />
+		<Unit filename="Src/Sample.h" />
+		<Unit filename="Src/SampleApp.cpp" />
+		<Unit filename="Src/SampleApp.h" />
+		<Unit filename="Src/Polygon/Sample_Polygon.cpp" />
+		<Unit filename="Src/Physics/Sample_Physics.cpp" />
+		<Unit filename="Src/RTS/Cursor.cpp" />
+		<Unit filename="Src/RTS/Cursor.h" />
+		<Unit filename="Src/RTS/Entity.h" />
+		<Unit filename="Src/RTS/Field.h" />
+		<Unit filename="Src/RTS/Level.cpp" />
+		<Unit filename="Src/RTS/Level.h" />
+		<Unit filename="Src/RTS/Path.cpp" />
+		<Unit filename="Src/RTS/Path.h" />
+		<Unit filename="Src/RTS/PathFinder.cpp" />
+		<Unit filename="Src/RTS/PathFinder.h" />
+		<Unit filename="Src/RTS/Point.h" />
+		<Unit filename="Src/RTS/Sample_RTS.cpp" />
+		<Unit filename="Src/RTS/Sample_RTS.h" />
+		<Unit filename="Src/RTS/Soldier.cpp" />
+		<Unit filename="Src/RTS/Soldier.h" />
+		<Unit filename="Src/RTS/Terrain.cpp" />
+		<Unit filename="Src/RTS/Terrain.h" />
+		<Unit filename="Src/RTS/World.cpp" />
+		<Unit filename="Src/RTS/World.h" />
+		<Unit filename="Src/Model/Sample_Model.cpp" />
+		<Unit filename="Src/Localization/Sample_Localization.cpp" />
+		<Unit filename="Src/Movie/Sample_Movie.cpp" />
+		<Unit filename="Src/OnlineLeaderboards/nsContentConfig.php" />
+		<Unit filename="Src/OnlineLeaderboards/Sample_OnlineLeaderboards.cpp" />
+		<Unit filename="Src/OnlineLeaderboards/test_leaderboards.php" />
+		<Unit filename="Src/Multiplayer/Sample_Multiplayer.cpp" />
+		<Unit filename="Src/Sound/Sample_Sound.cpp" />
+		<Unit filename="Src/Physics2D/Sample_Physics2D.cpp" />
+		<Unit filename="Src/Quake3Level/Sample_Quake3Level.cpp" />
+		<Unit filename="Src/Postprocessing/Sample_Postprocessing.cpp" />
+		<Unit filename="Src/RenderTarget/Sample_RenderTarget.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

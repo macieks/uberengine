@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="asset_defs/font">
+  <paramGroup name="all">
+    <param name="source" value="common/timesbd.ttf"/>
+    <param name="sizeInPixels" value="16"/>
+  </paramGroup>
+</asset>

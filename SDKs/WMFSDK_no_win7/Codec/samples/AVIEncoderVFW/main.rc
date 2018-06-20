@@ -1,0 +1,143 @@
+// Microsoft Visual C++ generated resource script.
+//
+//*@@@+++@@@@******************************************************************
+//
+// Copyright (C) Microsoft Corporation. All rights reserved.
+//
+//*@@@---@@@@******************************************************************
+
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_USAGE               "Usage:\n %1 -input source -output destination [params]\n"
+    IDS_RANGE               " range: ["
+    IDS_DEFAULT             "] default: "
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CL_INPUT            "input"
+    IDS_CL_OUTPUT           "output"
+    IDS_CL_AUDIO_ONLY       "audio_only"
+    IDS_CL_VIDEO_ONLY       "video_only"
+    IDS_CL_A_CODEC          "a_codec"
+    IDS_CL_A_BITRATE        "a_bitrate"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CL_A_TYPE           "a_type"
+    IDS_CL_V_CODEC          "v_codec"
+    IDS_CL_V_MODE           "v_mode"
+    IDS_CL_V_BITRATE        "v_bitrate"
+    IDS_CL_V_FRAMERATE      "v_framerate"
+    IDS_CL_V_KEYDIST        "v_keydist"
+    IDS_CL_V_BUFFER         "v_buffer"
+    IDS_CL_V_VBRQUALITY     "v_vbrquality"
+    IDS_CL_V_QUALITY        "v_quality"
+    IDS_CL_V_PEAKBUFFER     "v_peakbuffer"
+    IDS_CL_V_PEAKBITRATE    "v_peakbitrate"
+    IDS_CL_V_PROFILE        "v_profile"
+    IDS_CL_V_TYPE           "v_type"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CL_V_COMPLEXITY     "v_complexity"
+    IDS_CL_V_FORCEDKEY      "v_forcekey"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CL_ARG_A_WMAL       "WMAL"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CL_ARG_A_WMSP       "WMSP"
+    IDS_CL_ARG_A_SPEECH     "speech"
+    IDS_CL_ARG_A_AUTO       "auto"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CL_ARG_V_WMV3       "WMV3"
+    IDS_CL_ARG_V_SIMPLE     "simple"
+    IDS_CL_ARG_V_MAIN       "main"
+    IDS_CL_ARG_V_COMPLEX    "complex"
+    IDS_CL_ARG_V_PROGRESSIVE "progressive"
+    IDS_CL_ARG_V_INTERLACED "interlaced"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CL_ARG_1_PASS_CBR   "1_pass_cbr"
+    IDS_CL_ARG_2_PASS_CBR   "2_pass_cbr"
+    IDS_CL_ARG_1_PASS_VBR   "1_pass_vbr"
+    IDS_CL_ARG_2_PASS_VBR   "2_pass_vbr"
+    IDS_CL_ARG_2_PASS_CONSTRAINED_VBR "2_pass_constrained_vbr"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+LANGUAGE 0x9,0x1
+1 11 AVIEncoderVFW.bin
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,1929 @@
+<HTML>
+<HEAD>
+<!-- Created by texi2html 1.56k from /home/ramiro/code/ffmpeg/src/doc/general.texi on 13 January 2009 -->
+
+<TITLE>General Documentation</TITLE>
+</HEAD>
+<BODY>
+<H1>General Documentation</H1>
+<P>
+<P><HR><P>
+<H1>Table of Contents</H1>
+<UL>
+<LI><A NAME="TOC1" HREF="general.html#SEC1">1. external libraries</A>
+<UL>
+<LI><A NAME="TOC2" HREF="general.html#SEC2">1.1 AMR</A>
+</UL>
+<LI><A NAME="TOC3" HREF="general.html#SEC3">2. Supported File Formats and Codecs</A>
+<UL>
+<LI><A NAME="TOC4" HREF="general.html#SEC4">2.1 File Formats</A>
+<LI><A NAME="TOC5" HREF="general.html#SEC5">2.2 Image Formats</A>
+<LI><A NAME="TOC6" HREF="general.html#SEC6">2.3 Video Codecs</A>
+<LI><A NAME="TOC7" HREF="general.html#SEC7">2.4 Audio Codecs</A>
+<LI><A NAME="TOC8" HREF="general.html#SEC8">2.5 Subtitle Formats</A>
+</UL>
+<LI><A NAME="TOC9" HREF="general.html#SEC9">3. Platform Specific information</A>
+<UL>
+<LI><A NAME="TOC10" HREF="general.html#SEC10">3.1 BSD</A>
+<LI><A NAME="TOC11" HREF="general.html#SEC11">3.2 Windows</A>
+<UL>
+<LI><A NAME="TOC12" HREF="general.html#SEC12">3.2.1 Native Windows compilation</A>
+<LI><A NAME="TOC13" HREF="general.html#SEC13">3.2.2 Microsoft Visual C++ compatibility</A>
+<UL>
+<LI><A NAME="TOC14" HREF="general.html#SEC14">3.2.2.1 Using static libraries</A>
+<LI><A NAME="TOC15" HREF="general.html#SEC15">3.2.2.2 Using shared libraries</A>
+</UL>
+<LI><A NAME="TOC16" HREF="general.html#SEC16">3.2.3 Cross compilation for Windows with Linux</A>
+<LI><A NAME="TOC17" HREF="general.html#SEC17">3.2.4 Compilation under Cygwin</A>
+<LI><A NAME="TOC18" HREF="general.html#SEC18">3.2.5 Crosscompilation for Windows under Cygwin</A>
+</UL>
+<LI><A NAME="TOC19" HREF="general.html#SEC19">3.3 BeOS</A>
+<LI><A NAME="TOC20" HREF="general.html#SEC20">3.4 OS/2</A>
+</UL>
+<LI><A NAME="TOC21" HREF="general.html#SEC21">4. Developers Guide</A>
+<UL>
+<LI><A NAME="TOC22" HREF="general.html#SEC22">4.1 API</A>
+<LI><A NAME="TOC23" HREF="general.html#SEC23">4.2 Integrating libavcodec or libavformat in your program</A>
+<LI><A NAME="TOC24" HREF="general.html#SEC24">4.3 Coding Rules</A>
+<LI><A NAME="TOC25" HREF="general.html#SEC25">4.4 Development Policy</A>
+<LI><A NAME="TOC26" HREF="general.html#SEC26">4.5 Submitting patches</A>
+<LI><A NAME="TOC27" HREF="general.html#SEC27">4.6 New codecs or formats checklist</A>
+<LI><A NAME="TOC28" HREF="general.html#SEC28">4.7 patch submission checklist</A>
+<LI><A NAME="TOC29" HREF="general.html#SEC29">4.8 Patch review process</A>
+<LI><A NAME="TOC30" HREF="general.html#SEC30">4.9 Regression tests</A>
+</UL>
+</UL>
+<P><HR><P>
+<P>
+
+General Documentation
+
+
+
+
+<H1><A NAME="SEC1" HREF="general.html#TOC1">1. external libraries</A></H1>
+<P>
+
+FFmpeg can be hooked up with a number of external libraries to add support
+for more formats. None of them are used by default, their use has to be
+explicitly requested by passing the appropriate flags to <TT>`./configure'</TT>.
+
+
+
+<H2><A NAME="SEC2" HREF="general.html#TOC2">1.1 AMR</A></H2>
+<P>
+
+AMR comes in two different flavors, wideband and narrowband. FFmpeg can make
+use of the AMR wideband (floating-point mode) and the AMR narrowband
+(floating-point mode) reference decoders and encoders.
+
+Go to <A HREF="http://www.penguin.cz/~utx/amr">http://www.penguin.cz/~utx/amr</A> and follow the instructions for
+installing the libraries. Then pass <CODE>--enable-libamr-nb</CODE> and/or
+<CODE>--enable-libamr-wb</CODE> to configure to enable the libraries.
+
+Note that libamr is copyrighted without any sort of license grant. This means
+that you can use it if you legally obtained it but you are not allowed to
+redistribute it in any way. <STRONG>Any FFmpeg binaries with libamr support
+you create are non-free and unredistributable!</STRONG>
+
+
+
+
+<H1><A NAME="SEC3" HREF="general.html#TOC3">2. Supported File Formats and Codecs</A></H1>
+<P>
+
+You can use the <CODE>-formats</CODE> option to have an exhaustive list.
+
+
+
+<H2><A NAME="SEC4" HREF="general.html#TOC4">2.1 File Formats</A></H2>
+<P>
+
+FFmpeg supports the following file formats through the <CODE>libavformat</CODE>
+library:
+
+<TABLE BORDER>
+
+<TR><TD>Name </TD><TD> Encoding </TD><TD> Decoding </TD><TD> Comments</TD>
+
+</TR>
+<TR><TD>4xm                       </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> 4X Technologies format, used in some games.
+</TR>
+<TR><TD>ADTS AAC audio            </TD><TD> X </TD><TD> X</TD>
+
+</TR>
+<TR><TD>American Laser Games MM   </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> Multimedia format used in games like Mad Dog McCree.
+</TR>
+<TR><TD>ASF                       </TD><TD> X </TD><TD> X</TD>
+
+</TR>
+<TR><TD>AVI                       </TD><TD> X </TD><TD> X</TD>
+
+</TR>
+<TR><TD>AVM2 (Flash 9)            </TD><TD> X </TD><TD> X</TD>
+
+    </TD><TD> Only embedded audio is decoded.
+</TR>
+<TR><TD>AVS                       </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> Multimedia format used by the Creature Shock game.
+</TR>
+<TR><TD>Bethsoft VID              </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> Used in some games from Bethesda Softworks.
+</TR>
+<TR><TD>BFI                       </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> Brute Force &#38; Ignorance, used in Flash Traffic: City of Angels.
+</TR>
+<TR><TD>C93                       </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> Used in the game Cyberia from Interplay.
+</TR>
+<TR><TD>CIN                       </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> Multimedia format used by Delphine Software games.
+</TR>
+<TR><TD>Creative VOC              </TD><TD> X </TD><TD> X</TD>
+
+    </TD><TD> Created for the Sound Blaster Pro.
+</TR>
+<TR><TD>CRYO APC                  </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> Audio format used in some games by CRYO Interactive Entertainment.
+</TR>
+<TR><TD>DV                        </TD><TD> X </TD><TD> X</TD>
+
+</TR>
+<TR><TD>DXA                       </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> This format is used in the non-Windows version of the Feeble Files
+         game and different game cutscenes repacked for use with ScummVM.
+</TR>
+<TR><TD>Electronic Arts Multimedia  </TD><TD>    </TD><TD> X</TD>
+
+    </TD><TD> Used in various EA games; files have extensions like WVE and UV2.
+</TR>
+<TR><TD>FLIC                      </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> .fli/.flc files
+</TR>
+<TR><TD>FLV                       </TD><TD> X </TD><TD> X</TD>
+
+    </TD><TD> Macromedia Flash video files
+</TR>
+<TR><TD>GXF                       </TD><TD> X </TD><TD> X</TD>
+
+    </TD><TD> General eXchange Format SMPTE 360M, used by Thomson Grass Valley
+         playout servers.
+</TR>
+<TR><TD>id Cinematic              </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> Used in Quake II.
+</TR>
+<TR><TD>id RoQ                    </TD><TD> X </TD><TD> X</TD>
+
+    </TD><TD> Used in Quake III, Jedi Knight 2, other computer games.
+</TR>
+<TR><TD>IFF                       </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> Interchange File Format
+</TR>
+<TR><TD>Interplay MVE             </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> Format used in various Interplay computer games.
+</TR>
+<TR><TD>LMLM4                     </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> Used by Linux Media Labs MPEG-4 PCI boards
+</TR>
+<TR><TD>Matroska                  </TD><TD> X </TD><TD> X</TD>
+
+</TR>
+<TR><TD>MAXIS EA XA               </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> Used in Sim City 3000; file extension .xa.
+</TR>
+<TR><TD>Monkey's Audio            </TD><TD>   </TD><TD> X</TD>
+
+</TR>
+<TR><TD>Motion Pixels MVI         </TD><TD>   </TD><TD> X</TD>
+
+</TR>
+<TR><TD>MOV/QuickTime             </TD><TD> X </TD><TD> X</TD>
+
+</TR>
+<TR><TD>MPEG audio                </TD><TD> X </TD><TD> X</TD>
+
+</TR>
+<TR><TD>MPEG-1 systems            </TD><TD> X </TD><TD> X</TD>
+
+    </TD><TD> muxed audio and video
+</TR>
+<TR><TD>MPEG-2 PS                 </TD><TD> X </TD><TD> X</TD>
+
+    </TD><TD> also known as <CODE>VOB</CODE> file
+</TR>
+<TR><TD>MPEG-2 TS                 </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> also known as DVB Transport Stream
+</TR>
+<TR><TD>MPEG-4                    </TD><TD> X </TD><TD> X</TD>
+
+    </TD><TD> MPEG-4 is a variant of QuickTime.
+</TR>
+<TR><TD>MSN TCP webcam            </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> Used by MSN Messenger webcam streams.
+</TR>
+<TR><TD>MXF                       </TD><TD> X </TD><TD> X</TD>
+
+    </TD><TD> Material eXchange Format SMPTE 377M, used by D-Cinema, broadcast industry.
+</TR>
+<TR><TD>Nullsoft Video            </TD><TD>   </TD><TD> X</TD>
+
+</TR>
+<TR><TD>NUT                       </TD><TD> X </TD><TD> X</TD>
+
+    </TD><TD> NUT Open Container Format
+</TR>
+<TR><TD>OMA                       </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> Audio format used in Sony Sonic Stage and Sony Vegas.
+</TR>
+<TR><TD>PlayStation STR           </TD><TD>   </TD><TD> X</TD>
+
+</TR>
+<TR><TD>PVA                       </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> Used by TechnoTrend DVB PCI boards.
+</TR>
+<TR><TD>raw AC-3                  </TD><TD> X </TD><TD> X</TD>
+
+</TR>
+<TR><TD>raw CRI ADX audio         </TD><TD> X </TD><TD> X</TD>
+
+</TR>
+<TR><TD>raw MJPEG                 </TD><TD> X </TD><TD> X</TD>
+
+</TR>
+<TR><TD>raw MPEG video            </TD><TD> X </TD><TD> X</TD>
+
+</TR>
+<TR><TD>raw MPEG-4 video          </TD><TD> X </TD><TD> X</TD>
+
+</TR>
+<TR><TD>raw PCM 8/16/32 bits, 32/64-bit floating point, mu-law/A-law </TD><TD> X  </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>raw Shorten audio         </TD><TD>    </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>RealMedia                 </TD><TD> X </TD><TD> X</TD>
+
+</TR>
+<TR><TD>RL2                       </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> Audio and video format used in some games by Entertainment Software Partners.
+</TR>
+<TR><TD>Sega FILM/CPK             </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> Used in many Sega Saturn console games.
+</TR>
+<TR><TD>SEQ                       </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> Tiertex .seq files used in the DOS CD-ROM version of the game Flashback.
+</TR>
+<TR><TD>Sierra Online             </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> .sol files used in Sierra Online games.
+</TR>
+<TR><TD>Sierra VMD                </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> Used in Sierra CD-ROM games.
+</TR>
+<TR><TD>SIFF                      </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> Audio and video format used in some games by Beam Software.
+</TR>
+<TR><TD>Smacker                   </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> Multimedia format used by many games.
+</TR>
+<TR><TD>SUN AU format             </TD><TD> X </TD><TD> X</TD>
+
+</TR>
+<TR><TD>THP                       </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> Used on the Nintendo GameCube.
+</TR>
+<TR><TD>WAV                       </TD><TD> X </TD><TD> X</TD>
+
+</TR>
+<TR><TD>WC3 Movie                 </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> Multimedia format used in Origin's Wing Commander III computer game.
+</TR>
+<TR><TD>Westwood Studios VQA/AUD  </TD><TD>   </TD><TD> X</TD>
+
+    </TD><TD> Multimedia formats used in Westwood Studios games.
+</TR></TABLE>
+<P>
+
+<CODE>X</CODE> means that encoding (resp. decoding) is supported.
+
+
+
+<H2><A NAME="SEC5" HREF="general.html#TOC5">2.2 Image Formats</A></H2>
+<P>
+
+FFmpeg can read and write images for each frame of a video sequence. The
+following image formats are supported:
+
+<TABLE BORDER>
+
+<TR><TD>Name </TD><TD> Encoding </TD><TD> Decoding </TD><TD> Comments</TD>
+
+</TR>
+<TR><TD>.Y.U.V       </TD><TD> X </TD><TD> X </TD><TD> one raw file per component</TD>
+
+</TR>
+<TR><TD>animated GIF </TD><TD> X </TD><TD> X </TD><TD> Only uncompressed GIFs are generated.</TD>
+
+</TR>
+<TR><TD>JPEG         </TD><TD> X </TD><TD> X </TD><TD> Progressive JPEG is not supported.</TD>
+
+</TR>
+<TR><TD>PAM          </TD><TD> X </TD><TD> X </TD><TD> PAM is a PNM extension with alpha support.</TD>
+
+</TR>
+<TR><TD>PCX          </TD><TD>   </TD><TD> X </TD><TD> PC Paintbrush</TD>
+
+</TR>
+<TR><TD>PGM, PPM     </TD><TD> X </TD><TD> X</TD>
+
+</TR>
+<TR><TD>PGMYUV       </TD><TD> X </TD><TD> X </TD><TD> PGM with U and V components in YUV 4:2:0</TD>
+
+</TR>
+<TR><TD>PNG          </TD><TD> X </TD><TD> X </TD><TD> 2/4 bpp not supported yet</TD>
+
+</TR>
+<TR><TD>PTX          </TD><TD>   </TD><TD> X </TD><TD> V.Flash PTX format</TD>
+
+</TR>
+<TR><TD>RAS          </TD><TD>   </TD><TD> X </TD><TD> Sun Rasterfile</TD>
+
+</TR>
+<TR><TD>SGI          </TD><TD> X </TD><TD> X </TD><TD> SGI RGB image format</TD>
+
+</TR>
+<TR><TD>Targa        </TD><TD>   </TD><TD> X </TD><TD> Targa (.TGA) image format</TD>
+
+</TR>
+<TR><TD>TIFF         </TD><TD> X </TD><TD> X </TD><TD> YUV, JPEG and some extension is not supported yet.</TD>
+
+</TR></TABLE>
+<P>
+
+<CODE>X</CODE> means that encoding (resp. decoding) is supported.
+
+
+
+<H2><A NAME="SEC6" HREF="general.html#TOC6">2.3 Video Codecs</A></H2>
+<P>
+
+<TABLE BORDER>
+
+<TR><TD>Name </TD><TD> Encoding </TD><TD> Decoding </TD><TD> Comments</TD>
+
+</TR>
+<TR><TD>4X Video               </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Used in certain computer games.
+</TR>
+<TR><TD>American Laser Games Video  </TD><TD>    </TD><TD> X</TD>
+
+    </TD><TD> Used in games like Mad Dog McCree.
+</TR>
+<TR><TD>AMV                    </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Used in Chinese MP3 players.
+</TR>
+<TR><TD>Apple Animation        </TD><TD>  X  </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: 'rle '
+</TR>
+<TR><TD>Apple Graphics         </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: 'smc '
+</TR>
+<TR><TD>Apple MJPEG-B          </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>Apple QuickDraw        </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: qdrw
+</TR>
+<TR><TD>Apple Video            </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: rpza
+</TR>
+<TR><TD>Asus v1                </TD><TD>  X  </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: ASV1
+</TR>
+<TR><TD>Asus v2                </TD><TD>  X  </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: ASV2
+</TR>
+<TR><TD>ATI VCR1               </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: VCR1
+</TR>
+<TR><TD>ATI VCR2               </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: VCR2
+</TR>
+<TR><TD>Autodesk RLE           </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: AASC
+</TR>
+<TR><TD>AVID DNxHD             </TD><TD>   X </TD><TD>  X</TD>
+
+    </TD><TD> aka SMPTE VC3
+</TR>
+<TR><TD>AVS video              </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Video encoding used by the Creature Shock game.
+</TR>
+<TR><TD>Bethsoft VID           </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Used in some games from Bethesda Softworks.
+</TR>
+<TR><TD>C93 video              </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Codec used in Cyberia game.
+</TR>
+<TR><TD>CamStudio              </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: CSCD
+</TR>
+<TR><TD>Cin video              </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Codec used in Delphine Software games.
+</TR>
+<TR><TD>Cinepak                </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>Cirrus Logic AccuPak   </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: CLJR
+</TR>
+<TR><TD>Creative YUV           </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: CYUV
+</TR>
+<TR><TD>Dirac                  </TD><TD>  E  </TD><TD>  E</TD>
+
+    </TD><TD> supported through external libdirac/libschroedinger libraries
+</TR>
+<TR><TD>Duck TrueMotion v1     </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: DUCK
+</TR>
+<TR><TD>Duck TrueMotion v2     </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: TM20
+</TR>
+<TR><TD>DV                     </TD><TD>  X  </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>DXA Video              </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Codec originally used in Feeble Files game.
+</TR>
+<TR><TD>Electronic Arts CMV    </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Used in NHL 95 game.
+</TR>
+<TR><TD>Electronic Arts TGV    </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>Electronic Arts TGQ    </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>FFmpeg Video 1         </TD><TD>  X  </TD><TD>  X</TD>
+
+    </TD><TD> experimental lossless codec (fourcc: FFV1)
+</TR>
+<TR><TD>Flash Screen Video     </TD><TD>  X  </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: FSV1
+</TR>
+<TR><TD>FLIC video             </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>FLV                    </TD><TD>  X  </TD><TD>  X</TD>
+
+    </TD><TD> Sorenson H.263 used in Flash
+</TR>
+<TR><TD>Fraps FPS1             </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>H.261                  </TD><TD>  X  </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>H.263(+)               </TD><TD>  X  </TD><TD>  X</TD>
+
+    </TD><TD> also known as RealVideo 1.0
+</TR>
+<TR><TD>H.264                  </TD><TD>  E  </TD><TD>  X</TD>
+
+    </TD><TD> encoding supported through external library libx264
+</TR>
+<TR><TD>HuffYUV                </TD><TD>  X  </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>IBM Ultimotion         </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: ULTI
+</TR>
+<TR><TD>id Cinematic video     </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Used in Quake II.
+</TR>
+<TR><TD>id RoQ                 </TD><TD>  X  </TD><TD>  X</TD>
+
+    </TD><TD> Used in Quake III, Jedi Knight 2, other computer games.
+</TR>
+<TR><TD>Intel Indeo 3          </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>Interplay Video        </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Used in Interplay .MVE files.
+</TR>
+<TR><TD>JPEG-LS                </TD><TD>  X  </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: MJLS, lossless and near-lossless is supported.
+</TR>
+<TR><TD>KMVC                   </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Codec used in Worms games.
+</TR>
+<TR><TD>LOCO                   </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>lossless MJPEG         </TD><TD>  X  </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>Microsoft RLE          </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>Microsoft Video-1      </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>Mimic                  </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Used in MSN Messenger Webcam streams.
+</TR>
+<TR><TD>Miro VideoXL           </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: VIXL
+</TR>
+<TR><TD>MJPEG                  </TD><TD>  X  </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>Motion Pixels Video    </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>MPEG-1                 </TD><TD>  X  </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>MPEG-2                 </TD><TD>  X  </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>MPEG-4                 </TD><TD>  X  </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>MSMPEG4 V1             </TD><TD>  X  </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>MSMPEG4 V2             </TD><TD>  X  </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>MSMPEG4 V3             </TD><TD>  X  </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>MSZH                   </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Part of LCL
+</TR>
+<TR><TD>On2 VP3                </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> still experimental
+</TR>
+<TR><TD>On2 VP5                </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: VP50
+</TR>
+<TR><TD>On2 VP6                </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: VP60,VP61,VP62
+</TR>
+<TR><TD>planar RGB             </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: 8BPS
+</TR>
+<TR><TD>QPEG                   </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> fourccs: QPEG, Q1.0, Q1.1
+</TR>
+<TR><TD>RealVideo 1.0          </TD><TD>  X  </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>RealVideo 2.0          </TD><TD>  X  </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>RealVideo 3.0          </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> still far from ideal
+</TR>
+<TR><TD>RealVideo 4.0          </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>Renderware TXD         </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Texture dictionaries used by the Renderware Engine.
+</TR>
+<TR><TD>RTjpeg                 </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Video encoding used in NuppelVideo files.
+</TR>
+<TR><TD>Smacker video          </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Video encoding used in Smacker.
+</TR>
+<TR><TD>Snow                   </TD><TD>  X  </TD><TD>  X</TD>
+
+    </TD><TD> experimental wavelet codec (fourcc: SNOW)
+</TR>
+<TR><TD>Sony PlayStation MDEC  </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>Sorenson Video 1       </TD><TD>  X  </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: SVQ1
+</TR>
+<TR><TD>Sorenson Video 3       </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: SVQ3
+</TR>
+<TR><TD>Sunplus MJPEG          </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: SP5X
+</TR>
+<TR><TD>TechSmith Camtasia     </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> fourcc: TSCC
+</TR>
+<TR><TD>Theora                 </TD><TD>  E  </TD><TD>  X</TD>
+
+    </TD><TD> encoding supported through external library libtheora
+</TR>
+<TR><TD>THP                    </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Used on the Nintendo GameCube.
+</TR>
+<TR><TD>Tiertex Seq video      </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Codec used in DOS CD-ROM FlashBack game.
+</TR>
+<TR><TD>VC-1                   </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>VMD Video              </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Used in Sierra VMD files.
+</TR>
+<TR><TD>VMware Video           </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Codec used in videos captured by VMware.
+</TR>
+<TR><TD>Westwood VQA           </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>Winnov WNV1            </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>WMV7                   </TD><TD>  X  </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>WMV8                   </TD><TD>  X  </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>WMV9                   </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> not completely working
+</TR>
+<TR><TD>Xan/WC3                </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Used in Wing Commander III .MVE files.
+</TR>
+<TR><TD>ZLIB                   </TD><TD>  X  </TD><TD>  X</TD>
+
+    </TD><TD> part of LCL, encoder experimental
+</TR>
+<TR><TD>ZMBV                   </TD><TD>   X </TD><TD>  X</TD>
+
+    </TD><TD> Encoder works only in PAL8.
+</TR></TABLE>
+<P>
+
+<CODE>X</CODE> means that encoding (resp. decoding) is supported.
+
+<CODE>E</CODE> means that support is provided through an external library.
+
+
+
+<H2><A NAME="SEC7" HREF="general.html#TOC7">2.4 Audio Codecs</A></H2>
+<P>
+
+<TABLE BORDER>
+
+<TR><TD>Name </TD><TD> Encoding </TD><TD> Decoding </TD><TD> Comments</TD>
+
+</TR>
+<TR><TD>4X IMA ADPCM           </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>8SVX audio             </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>AAC                    </TD><TD>  E  </TD><TD>  X</TD>
+
+    </TD><TD> encoding supported through external library libfaac
+</TR>
+<TR><TD>AC-3                   </TD><TD> IX  </TD><TD> IX</TD>
+
+</TR>
+<TR><TD>AMR-NB                 </TD><TD>  E  </TD><TD>  E</TD>
+
+    </TD><TD> supported through external library libamrnb
+</TR>
+<TR><TD>AMR-WB                 </TD><TD>  E  </TD><TD>  E</TD>
+
+    </TD><TD> supported through external library libamrwb
+</TR>
+<TR><TD>AMV IMA ADPCM          </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Used in AMV files
+</TR>
+<TR><TD>Apple lossless audio   </TD><TD>  X  </TD><TD>  X</TD>
+
+    </TD><TD> QuickTime fourcc 'alac'
+</TR>
+<TR><TD>Apple MACE 3           </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>Apple MACE 6           </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>ATRAC 3                </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>CD-ROM XA ADPCM        </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>Cin audio              </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Codec used in Delphine Software International games.
+</TR>
+<TR><TD>Creative ADPCM         </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> 16 -&#62; 4, 8 -&#62; 4, 8 -&#62; 3, 8 -&#62; 2
+</TR>
+<TR><TD>CRI ADX ADPCM          </TD><TD>  X  </TD><TD>  X</TD>
+
+    </TD><TD> Used in Sega Dreamcast games.
+</TR>
+<TR><TD>DSP Group TrueSpeech   </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>DTS Coherent Audio     </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>Duck DK3 IMA ADPCM     </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Used in some Sega Saturn console games.
+</TR>
+<TR><TD>Duck DK4 IMA ADPCM     </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Used in some Sega Saturn console games.
+</TR>
+<TR><TD>DV audio               </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>Electronic Arts ADPCM  </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Used in various EA titles.
+</TR>
+<TR><TD>Enhanced AC-3          </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>FLAC lossless audio    </TD><TD> IX  </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>G.726  ADPCM           </TD><TD>  X  </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>GSM                    </TD><TD>  E  </TD><TD>  E</TD>
+
+    </TD><TD> supported through external library libgsm
+</TR>
+<TR><TD>GSM_MS                 </TD><TD>  E  </TD><TD>  E</TD>
+
+    </TD><TD> supported through external library libgsm
+</TR>
+<TR><TD>id RoQ DPCM            </TD><TD>  X  </TD><TD>  X</TD>
+
+    </TD><TD> Used in Quake III, Jedi Knight 2, other computer games.
+</TR>
+<TR><TD>Intel Music Coder      </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>Interplay MVE DPCM     </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Used in various Interplay computer games.
+</TR>
+<TR><TD>MAXIS EA ADPCM         </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Used in Sim City 3000.
+</TR>
+<TR><TD>Microsoft ADPCM        </TD><TD>  X  </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>MLP/TrueHD             </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Used in DVD-Audio and Blu-Ray discs.
+</TR>
+<TR><TD>Monkey's Audio         </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Only versions 3.97-3.99 are supported.
+</TR>
+<TR><TD>MPEG audio layer 3     </TD><TD>  E  </TD><TD> IX</TD>
+
+    </TD><TD> encoding supported through external library LAME
+</TR>
+<TR><TD>MPEG audio layer 2     </TD><TD> IX  </TD><TD> IX</TD>
+
+</TR>
+<TR><TD>MS IMA ADPCM           </TD><TD>  X  </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>Musepack               </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> SV7 and SV8 are supported.
+</TR>
+<TR><TD>Nellymoser ASAO        </TD><TD>  X  </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>QCELP / PureVoice      </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>Qdesign QDM2           </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> There are still some distortions.
+</TR>
+<TR><TD>QT IMA ADPCM           </TD><TD>  X  </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>RA144                  </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Real 14400 bit/s codec
+</TR>
+<TR><TD>RA288                  </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Real 28800 bit/s codec
+</TR>
+<TR><TD>RADnet                 </TD><TD> IX  </TD><TD> IX</TD>
+
+    </TD><TD> Real low bitrate AC-3 codec
+</TR>
+<TR><TD>Real COOK              </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> All versions except 5.1 are supported.
+</TR>
+<TR><TD>Shorten                </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>Sierra Online DPCM     </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Used in Sierra Online game audio files.
+</TR>
+<TR><TD>Smacker audio          </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>SMJPEG IMA ADPCM       </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Used in certain Loki game ports.
+</TR>
+<TR><TD>Sonic                  </TD><TD>  X  </TD><TD>  X</TD>
+
+    </TD><TD> experimental codec
+</TR>
+<TR><TD>Sonic lossless         </TD><TD>  X  </TD><TD>  X</TD>
+
+    </TD><TD> experimental codec
+</TR>
+<TR><TD>Speex                  </TD><TD>     </TD><TD>  E</TD>
+
+    </TD><TD> supported through external library libspeex
+</TR>
+<TR><TD>THP ADPCM              </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Used on the Nintendo GameCube.
+</TR>
+<TR><TD>True Audio (TTA)       </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>Vorbis                 </TD><TD>  X  </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>WavPack                </TD><TD>     </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>Westwood Studios IMA ADPCM </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Used in Westwood Studios games like Command and Conquer.
+</TR>
+<TR><TD>WMA v1/v2              </TD><TD>  X  </TD><TD>  X</TD>
+
+</TR>
+<TR><TD>Xan DPCM               </TD><TD>     </TD><TD>  X</TD>
+
+    </TD><TD> Used in Origin's Wing Commander IV AVI files.
+</TR></TABLE>
+<P>
+
+<CODE>X</CODE> means that encoding (resp. decoding) is supported.
+
+<CODE>E</CODE> means that support is provided through an external library.
+
+<CODE>I</CODE> means that an integer-only version is available, too (ensures high
+performance on systems without hardware floating point support).
+
+
+
+<H2><A NAME="SEC8" HREF="general.html#TOC8">2.5 Subtitle Formats</A></H2>
+<P>
+
+<TABLE BORDER>
+
+<TR><TD>Name </TD><TD> Muxing </TD><TD> Demuxing </TD><TD> Encoding </TD><TD> Decoding </TD><TD> Rendering</TD>
+
+</TR>
+<TR><TD>ASS/SSA      </TD><TD> X </TD><TD> X</TD>
+
+</TR>
+<TR><TD>DVB          </TD><TD> X </TD><TD> X </TD><TD> X </TD><TD> X </TD><TD> X</TD>
+
+</TR>
+<TR><TD>DVD          </TD><TD> X </TD><TD> X </TD><TD> X </TD><TD> X </TD><TD> X</TD>
+
+</TR></TABLE>
+<P>
+
+<CODE>X</CODE> means that the feature is supported.
+
+
+
+<H1><A NAME="SEC9" HREF="general.html#TOC9">3. Platform Specific information</A></H1>
+<P>
+
+
+
+<H2><A NAME="SEC10" HREF="general.html#TOC10">3.1 BSD</A></H2>
+<P>
+
+BSD make will not build FFmpeg, you need to install and use GNU Make
+(<TT>`gmake'</TT>).
+
+
+
+<H2><A NAME="SEC11" HREF="general.html#TOC11">3.2 Windows</A></H2>
+<P>
+
+To get help and instructions for building FFmpeg under Windows, check out
+the FFmpeg Windows Help Forum at
+<A HREF="http://ffmpeg.arrozcru.org/">http://ffmpeg.arrozcru.org/</A>.
+
+
+
+<H3><A NAME="SEC12" HREF="general.html#TOC12">3.2.1 Native Windows compilation</A></H3>
+<P>
+
+FFmpeg can be built to run natively on Windows using the MinGW tools. Install
+the latest versions of MSYS and MinGW from <A HREF="http://www.mingw.org/">http://www.mingw.org/</A>.
+You can find detailed installation
+instructions in the download section and the FAQ.
+
+FFmpeg does not build out-of-the-box with the packages the automated MinGW
+installer provides. It also requires coreutils to be installed and many other
+packages updated to the latest version. The minimum version for some packages
+are listed below:
+
+
+<UL>
+<LI>bash 3.1
+
+<LI>msys-make 3.81-2 (note: not mingw32-make)
+
+<LI>w32api 3.13
+
+<LI>mingw-runtime 3.15
+
+</UL>
+
+<P>
+
+You will also need to pass <CODE>-fno-common</CODE> to the compiler to work around
+a GCC bug (see <A HREF="http://gcc.gnu.org/bugzilla/show_bug.cgi?id=37216">http://gcc.gnu.org/bugzilla/show_bug.cgi?id=37216</A>).
+
+Within the MSYS shell, configure and make with:
+
+
+<PRE>
+./configure --enable-memalign-hack --extra-cflags=-fno-common
+make
+make install
+</PRE>
+
+<P>
+
+This will install <TT>`ffmpeg.exe'</TT> along with many other development files
+to <TT>`/usr/local'</TT>. You may specify another install path using the
+<CODE>--prefix</CODE> option in <TT>`configure'</TT>.
+
+Notes:
+
+
+<UL>
+
+<LI>In order to compile vhooks, you must have a POSIX-compliant libdl in
+
+your MinGW system. Get dlfcn-win32 from
+<A HREF="http://code.google.com/p/dlfcn-win32">http://code.google.com/p/dlfcn-win32</A>.
+
+<LI>In order to compile FFplay, you must have the MinGW development library
+
+of SDL. Get it from <A HREF="http://www.libsdl.org">http://www.libsdl.org</A>.
+Edit the <TT>`bin/sdl-config'</TT> script so that it points to the correct prefix
+where SDL was installed. Verify that <TT>`sdl-config'</TT> can be launched from
+the MSYS command line.
+
+<LI>By using <CODE>./configure --enable-shared</CODE> when configuring FFmpeg,
+
+you can build libavutil, libavcodec and libavformat as DLLs.
+
+</UL>
+
+<P>
+
+
+
+<H3><A NAME="SEC13" HREF="general.html#TOC13">3.2.2 Microsoft Visual C++ compatibility</A></H3>
+<P>
+
+As stated in the FAQ, FFmpeg will not compile under MSVC++. However, if you
+want to use the libav* libraries in your own applications, you can still
+compile those applications using MSVC++. But the libav* libraries you link
+to <EM>must</EM> be built with MinGW. However, you will not be able to debug
+inside the libav* libraries, since MSVC++ does not recognize the debug
+symbols generated by GCC.
+We strongly recommend you to move over from MSVC++ to MinGW tools.
+
+This description of how to use the FFmpeg libraries with MSVC++ is based on
+Microsoft Visual C++ 2005 Express Edition. If you have a different version,
+you might have to modify the procedures slightly.
+
+
+
+<H4><A NAME="SEC14" HREF="general.html#TOC14">3.2.2.1 Using static libraries</A></H4>
+<P>
+
+Assuming you have just built and installed FFmpeg in <TT>`/usr/local'</TT>.
+
+
+<OL>
+
+<LI>Create a new console application ("File / New / Project") and then
+
+select "Win32 Console Application". On the appropriate page of the
+Application Wizard, uncheck the "Precompiled headers" option.
+
+<LI>Write the source code for your application, or, for testing, just
+
+copy the code from an existing sample application into the source file
+that MSVC++ has already created for you. For example, you can copy
+<TT>`output_example.c'</TT> from the FFmpeg distribution.
+
+<LI>Open the "Project / Properties" dialog box. In the "Configuration"
+
+combo box, select "All Configurations" so that the changes you make will
+affect both debug and release builds. In the tree view on the left hand
+side, select "C/C++ / General", then edit the "Additional Include
+Directories" setting to contain the path where the FFmpeg includes were
+installed (i.e. <TT>`c:\msys\1.0\local\include'</TT>).
+Do not add MinGW's include directory here, or the include files will
+conflict with MSVC's.
+
+<LI>Still in the "Project / Properties" dialog box, select
+
+"Linker / General" from the tree view and edit the
+"Additional Library Directories" setting to contain the <TT>`lib'</TT>
+directory where FFmpeg was installed (i.e. <TT>`c:\msys\1.0\local\lib'</TT>),
+the directory where MinGW libs are installed (i.e. <TT>`c:\mingw\lib'</TT>),
+and the directory where MinGW's GCC libs are installed
+(i.e. <TT>`C:\mingw\lib\gcc\mingw32\4.2.1-sjlj'</TT>). Then select
+"Linker / Input" from the tree view, and add the files <TT>`libavformat.a'</TT>,
+<TT>`libavcodec.a'</TT>, <TT>`libavutil.a'</TT>, <TT>`libmingwex.a'</TT>,
+<TT>`libgcc.a'</TT>, and any other libraries you used (i.e. <TT>`libz.a'</TT>)
+to the end of "Additional Dependencies".
+
+<LI>Now, select "C/C++ / Code Generation" from the tree view. Select
+
+"Debug" in the "Configuration" combo box. Make sure that "Runtime
+Library" is set to "Multi-threaded Debug DLL". Then, select "Release" in
+the "Configuration" combo box and make sure that "Runtime Library" is
+set to "Multi-threaded DLL".
+
+<LI>Click "OK" to close the "Project / Properties" dialog box.
+
+
+<LI>MSVC++ lacks some C99 header files that are fundamental for FFmpeg.
+
+Get msinttypes from <A HREF="http://code.google.com/p/msinttypes/downloads/list">http://code.google.com/p/msinttypes/downloads/list</A>
+and install it in MSVC++'s include directory
+(i.e. <TT>`C:\Program Files\Microsoft Visual Studio 8\VC\include'</TT>).
+
+<LI>MSVC++ also does not understand the <CODE>inline</CODE> keyword used by
+
+FFmpeg, so you must add this line before <CODE>#include</CODE>ing libav*:
+
+<PRE>
+#define inline _inline
+</PRE>
+
+
+<LI>Build your application, everything should work.
+
+
+</OL>
+
+<P>
+
+
+
+<H4><A NAME="SEC15" HREF="general.html#TOC15">3.2.2.2 Using shared libraries</A></H4>
+<P>
+
+This is how to create DLL and LIB files that are compatible with MSVC++:
+
+
+<OL>
+
+<LI>Add a call to <TT>`vcvars32.bat'</TT> (which sets up the environment
+
+variables for the Visual C++ tools) as the first line of <TT>`msys.bat'</TT>.
+The standard location for <TT>`vcvars32.bat'</TT> is
+<TT>`C:\Program Files\Microsoft Visual Studio 8\VC\bin\vcvars32.bat'</TT>,
+and the standard location for <TT>`msys.bat'</TT> is <TT>`C:\msys\1.0\msys.bat'</TT>.
+If this corresponds to your setup, add the following line as the first line
+of <TT>`msys.bat'</TT>:
+
+
+<PRE>
+call "C:\Program Files\Microsoft Visual Studio 8\VC\bin\vcvars32.bat"
+</PRE>
+
+
+Alternatively, you may start the <TT>`Visual Studio 2005 Command Prompt'</TT>,
+and run <TT>`c:\msys\1.0\msys.bat'</TT> from there.
+
+<LI>Within the MSYS shell, run <CODE>lib.exe</CODE>. If you get a help message
+
+from <TT>`Microsoft (R) Library Manager'</TT>, this means your environment
+variables are set up correctly, the <TT>`Microsoft (R) Library Manager'</TT>
+is on the path and will be used by FFmpeg to create
+MSVC++-compatible import libraries.
+
+<LI>Build FFmpeg with
+
+
+
+<PRE>
+./configure --enable-shared --enable-memalign-hack
+make
+make install
+</PRE>
+
+
+Your install path (<TT>`/usr/local/'</TT> by default) should now have the
+necessary DLL and LIB files under the <TT>`bin'</TT> directory.
+
+</OL>
+
+<P>
+
+To use those files with MSVC++, do the same as you would do with
+the static libraries, as described above. But in Step 4,
+you should only need to add the directory where the LIB files are installed
+(i.e. <TT>`c:\msys\usr\local\bin'</TT>). This is not a typo, the LIB files are
+installed in the <TT>`bin'</TT> directory. And instead of adding <TT>`libxx.a'</TT>
+files, you should add <TT>`avcodec.lib'</TT>, <TT>`avformat.lib'</TT>, and
+<TT>`avutil.lib'</TT>. There should be no need for <TT>`libmingwex.a'</TT>,
+<TT>`libgcc.a'</TT>, and <TT>`wsock32.lib'</TT>, nor any other external library
+statically linked into the DLLs. The <TT>`bin'</TT> directory contains a bunch
+of DLL files, but the ones that are actually used to run your application
+are the ones with a major version number in their filenames
+(i.e. <TT>`avcodec-51.dll'</TT>).
+
+
+
+<H3><A NAME="SEC16" HREF="general.html#TOC16">3.2.3 Cross compilation for Windows with Linux</A></H3>
+<P>
+
+You must use the MinGW cross compilation tools available at
+<A HREF="http://www.mingw.org/">http://www.mingw.org/</A>.
+
+Then configure FFmpeg with the following options:
+
+<PRE>
+./configure --target-os=mingw32 --cross-prefix=i386-mingw32msvc-
+</PRE>
+
+<P>
+(you can change the cross-prefix according to the prefix chosen for the
+MinGW tools).
+
+Then you can easily test FFmpeg with Wine
+(<A HREF="http://www.winehq.com/">http://www.winehq.com/</A>).
+
+
+
+<H3><A NAME="SEC17" HREF="general.html#TOC17">3.2.4 Compilation under Cygwin</A></H3>
+<P>
+
+The main issue with the 1.5.x Cygwin versions is that newlib, its C library,
+does not contain llrint().  You need to upgrade to the unstable 1.7.x versions,
+or leverage the implementation in MinGW (as explained below).
+
+Just install your Cygwin with all the "Base" packages, plus the
+following "Devel" ones:
+
+<PRE>
+binutils, gcc-core, make, subversion, mingw-runtime, diffutils
+</PRE>
+
+<P>
+
+The experimental gcc4 package is still buggy, hence please
+use the official gcc 3.4.4 or a 4.2.x compiled from source by yourself.
+
+Install the current binutils-20080624-2 as they work fine (the old
+binutils-20060709-1 proved buggy on shared builds).
+
+Then create a small library that just contains llrint():
+
+
+<PRE>
+ar x /usr/lib/mingw/libmingwex.a llrint.o
+ar cq /usr/local/lib/libllrint.a llrint.o
+</PRE>
+
+<P>
+
+Then run
+
+
+<PRE>
+./configure --enable-static --disable-shared  --extra-ldflags='-L /usr/local/lib' --extra-libs='-l llrint'
+</PRE>
+
+<P>
+
+to make a static build or
+
+
+<PRE>
+./configure --enable-shared --disable-static  --extra-ldflags='-L /usr/local/lib' --extra-libs='-l llrint'
+</PRE>
+
+<P>
+
+to build shared libraries.
+
+If you want to build FFmpeg with additional libraries, download Cygwin
+"Devel" packages for Ogg and Vorbis from any Cygwin packages repository:
+
+<PRE>
+libogg-devel, libvorbis-devel
+</PRE>
+
+<P>
+
+These library packages are only available from Cygwin Ports
+(<A HREF="http://sourceware.org/cygwinports/">http://sourceware.org/cygwinports/</A>) :
+
+
+<PRE>
+yasm, libSDL-devel, libdirac-devel, libfaac-devel, libfaad-devel, libgsm-devel,
+libmp3lame-devel, libschroedinger1.0-devel, speex-devel, libtheora-devel,
+libxvidcore-devel
+</PRE>
+
+<P>
+
+The recommendation for libnut and x264 is to build them from source by
+yourself, as they evolve too quickly for Cygwin Ports to be up to date.
+
+
+
+<H3><A NAME="SEC18" HREF="general.html#TOC18">3.2.5 Crosscompilation for Windows under Cygwin</A></H3>
+<P>
+
+With Cygwin you can create Windows binaries that do not need the cygwin1.dll.
+
+Just install your Cygwin as explained before, plus these additional
+"Devel" packages:
+
+<PRE>
+gcc-mingw-core, mingw-runtime, mingw-zlib
+</PRE>
+
+<P>
+
+and add some special flags to your configure invocation.
+
+For a static build run
+
+<PRE>
+./configure --target-os=mingw32 --enable-memalign-hack --enable-static --disable-shared --extra-cflags=-mno-cygwin --extra-libs=-mno-cygwin
+</PRE>
+
+<P>
+
+and for a build with shared libraries
+
+<PRE>
+./configure --target-os=mingw32 --enable-memalign-hack --enable-shared --disable-static --extra-cflags=-mno-cygwin --extra-libs=-mno-cygwin
+</PRE>
+
+<P>
+
+
+
+<H2><A NAME="SEC19" HREF="general.html#TOC19">3.3 BeOS</A></H2>
+<P>
+
+BeOS support is broken in mysterious ways.
+
+
+
+<H2><A NAME="SEC20" HREF="general.html#TOC20">3.4 OS/2</A></H2>
+<P>
+
+For information about compiling FFmpeg on OS/2 see
+<A HREF="http://www.edm2.com/index.php/FFmpeg">http://www.edm2.com/index.php/FFmpeg</A>.
+
+
+
+<H1><A NAME="SEC21" HREF="general.html#TOC21">4. Developers Guide</A></H1>
+<P>
+
+
+
+<H2><A NAME="SEC22" HREF="general.html#TOC22">4.1 API</A></H2>
+
+<UL>
+<LI>libavcodec is the library containing the codecs (both encoding and
+
+decoding). Look at <TT>`libavcodec/apiexample.c'</TT> to see how to use it.
+
+<LI>libavformat is the library containing the file format handling (mux and
+
+demux code for several formats). Look at <TT>`ffplay.c'</TT> to use it in a
+player. See <TT>`output_example.c'</TT> to use it to generate audio or video
+streams.
+
+</UL>
+
+<P>
+
+
+
+<H2><A NAME="SEC23" HREF="general.html#TOC23">4.2 Integrating libavcodec or libavformat in your program</A></H2>
+<P>
+
+You can integrate all the source code of the libraries to link them
+statically to avoid any version problem. All you need is to provide a
+'config.mak' and a 'config.h' in the parent directory. See the defines
+generated by ./configure to understand what is needed.
+
+You can use libavcodec or libavformat in your commercial program, but
+<EM>any patch you make must be published</EM>. The best way to proceed is
+to send your patches to the FFmpeg mailing list.
+
+
+
+<H2><A NAME="SEC24" HREF="general.html#TOC24">4.3 Coding Rules</A></H2>
+<P>
+
+FFmpeg is programmed in the ISO C90 language with a few additional
+features from ISO C99, namely:
+
+<UL>
+<LI>
+
+the <SAMP>`inline'</SAMP> keyword;
+<LI>
+
+<SAMP>`//'</SAMP> comments;
+<LI>
+
+designated struct initializers (<SAMP>`struct s x = { .i = 17 };'</SAMP>)
+<LI>
+
+compound literals (<SAMP>`x = (struct s) { 17, 23 };'</SAMP>)
+</UL>
+
+<P>
+
+These features are supported by all compilers we care about, so we will not
+accept patches to remove their use unless they absolutely do not impair
+clarity and performance.
+
+All code must compile with GCC 2.95 and GCC 3.3. Currently, FFmpeg also
+compiles with several other compilers, such as the Compaq ccc compiler
+or Sun Studio 9, and we would like to keep it that way unless it would
+be exceedingly involved. To ensure compatibility, please do not use any
+additional C99 features or GCC extensions. Especially watch out for:
+
+<UL>
+<LI>
+
+mixing statements and declarations;
+<LI>
+
+<SAMP>`long long'</SAMP> (use <SAMP>`int64_t'</SAMP> instead);
+<LI>
+
+<SAMP>`__attribute__'</SAMP> not protected by <SAMP>`#ifdef __GNUC__'</SAMP> or similar;
+<LI>
+
+GCC statement expressions (<SAMP>`(x = ({ int y = 4; y; })'</SAMP>).
+</UL>
+
+<P>
+
+Indent size is 4.
+The presentation is the one specified by 'indent -i4 -kr -nut'.
+The TAB character is forbidden outside of Makefiles as is any
+form of trailing whitespace. Commits containing either will be
+rejected by the Subversion repository.
+
+The main priority in FFmpeg is simplicity and small code size in order to
+minimize the bug count.
+
+Comments: Use the JavaDoc/Doxygen
+format (see examples below) so that code documentation
+can be generated automatically. All nontrivial functions should have a comment
+above them explaining what the function does, even if it is just one sentence.
+All structures and their member variables should be documented, too.
+
+<PRE>
+/**
+ * @file mpeg.c
+ * MPEG codec.
+ * @author ...
+ */
+
+/**
+ * Summary sentence.
+ * more text ...
+ * ...
+ */
+typedef struct Foobar{
+    int var1; /**&#60; var1 description */
+    int var2; ///&#60; var2 description
+    /** var3 description */
+    int var3;
+} Foobar;
+
+/**
+ * Summary sentence.
+ * more text ...
+ * ...
+ * @param my_parameter description of my_parameter
+ * @return return value description
+ */
+int myfunc(int my_parameter)
+...
+</PRE>
+
+<P>
+
+fprintf and printf are forbidden in libavformat and libavcodec,
+please use av_log() instead.
+
+Casts should be used only when necessary. Unneeded parentheses
+should also be avoided if they don't make the code easier to understand.
+
+
+
+<H2><A NAME="SEC25" HREF="general.html#TOC25">4.4 Development Policy</A></H2>
+<P>
+
+
+<OL>
+<LI>
+
+   Contributions should be licensed under the LGPL 2.1, including an
+   "or any later version" clause, or the MIT license.  GPL 2 including
+   an "or any later version" clause is also acceptable, but LGPL is
+   preferred.
+<LI>
+
+   You must not commit code which breaks FFmpeg! (Meaning unfinished but
+   enabled code which breaks compilation or compiles but does not work or
+   breaks the regression tests)
+   You can commit unfinished stuff (for testing etc), but it must be disabled
+   (#ifdef etc) by default so it does not interfere with other developers'
+   work.
+<LI>
+
+   You do not have to over-test things. If it works for you, and you think it
+   should work for others, then commit. If your code has problems
+   (portability, triggers compiler bugs, unusual environment etc) they will be
+   reported and eventually fixed.
+<LI>
+
+   Do not commit unrelated changes together, split them into self-contained
+   pieces. Also do not forget that if part B depends on part A, but A does not
+   depend on B, then A can and should be committed first and separate from B.
+   Keeping changes well split into self-contained parts makes reviewing and
+   understanding them on the commit log mailing list easier. This also helps
+   in case of debugging later on.
+   Also if you have doubts about splitting or not splitting, do not hesitate to
+   ask/discuss it on the developer mailing list.
+<LI>
+
+   Do not change behavior of the program (renaming options etc) without
+   first discussing it on the ffmpeg-devel mailing list. Do not remove
+   functionality from the code. Just improve!
+
+   Note: Redundant code can be removed.
+<LI>
+
+   Do not commit changes to the build system (Makefiles, configure script)
+   which change behavior, defaults etc, without asking first. The same
+   applies to compiler warning fixes, trivial looking fixes and to code
+   maintained by other developers. We usually have a reason for doing things
+   the way we do. Send your changes as patches to the ffmpeg-devel mailing
+   list, and if the code maintainers say OK, you may commit. This does not
+   apply to files you wrote and/or maintain.
+<LI>
+
+   We refuse source indentation and other cosmetic changes if they are mixed
+   with functional changes, such commits will be rejected and removed. Every
+   developer has his own indentation style, you should not change it. Of course
+   if you (re)write something, you can use your own style, even though we would
+   prefer if the indentation throughout FFmpeg was consistent (Many projects
+   force a given indentation style - we do not.). If you really need to make
+   indentation changes (try to avoid this), separate them strictly from real
+   changes.
+
+   NOTE: If you had to put if(){ .. } over a large (&#62; 5 lines) chunk of code,
+   then either do NOT change the indentation of the inner part within (do not
+   move it to the right)! or do so in a separate commit
+<LI>
+
+   Always fill out the commit log message. Describe in a few lines what you
+   changed and why. You can refer to mailing list postings if you fix a
+   particular bug. Comments such as "fixed!" or "Changed it." are unacceptable.
+<LI>
+
+   If you apply a patch by someone else, include the name and email address in
+   the log message. Since the ffmpeg-cvslog mailing list is publicly
+   archived you should add some SPAM protection to the email address. Send an
+   answer to ffmpeg-devel (or wherever you got the patch from) saying that
+   you applied the patch.
+<LI>
+
+   When applying patches that have been discussed (at length) on the mailing
+   list, reference the thread in the log message.
+<LI>
+
+    Do NOT commit to code actively maintained by others without permission.
+    Send a patch to ffmpeg-devel instead. If no one answers within a reasonable
+    timeframe (12h for build failures and security fixes, 3 days small changes,
+    1 week for big patches) then commit your patch if you think it is OK.
+    Also note, the maintainer can simply ask for more time to review!
+<LI>
+
+    Subscribe to the ffmpeg-cvslog mailing list. The diffs of all commits
+    are sent there and reviewed by all the other developers. Bugs and possible
+    improvements or general questions regarding commits are discussed there. We
+    expect you to react if problems with your code are uncovered.
+<LI>
+
+    Update the documentation if you change behavior or add features. If you are
+    unsure how best to do this, send a patch to ffmpeg-devel, the documentation
+    maintainer(s) will review and commit your stuff.
+<LI>
+
+    Try to keep important discussions and requests (also) on the public
+    developer mailing list, so that all developers can benefit from them.
+<LI>
+
+    Never write to unallocated memory, never write over the end of arrays,
+    always check values read from some untrusted source before using them
+    as array index or other risky things.
+<LI>
+
+    Remember to check if you need to bump versions for the specific libav
+    parts (libavutil, libavcodec, libavformat) you are changing. You need
+    to change the version integer.
+    Incrementing the first component means no backward compatibility to
+    previous versions (e.g. removal of a function from the public API).
+    Incrementing the second component means backward compatible change
+    (e.g. addition of a function to the public API or extension of an
+    existing data structure).
+    Incrementing the third component means a noteworthy binary compatible
+    change (e.g. encoder bug fix that matters for the decoder).
+<LI>
+
+    Compiler warnings indicate potential bugs or code with bad style. If a type of
+    warning always points to correct and clean code, that warning should
+    be disabled, not the code changed.
+    Thus the remaining warnings can either be bugs or correct code.
+    If it is a bug, the bug has to be fixed. If it is not, the code should
+    be changed to not generate a warning unless that causes a slowdown
+    or obfuscates the code.
+<LI>
+
+    If you add a new file, give it a proper license header. Do not copy and
+    paste it from a random place, use an existing file as template.
+</OL>
+
+<P>
+
+We think our rules are not too hard. If you have comments, contact us.
+
+Note, these rules are mostly borrowed from the MPlayer project.
+
+
+
+<H2><A NAME="SEC26" HREF="general.html#TOC26">4.5 Submitting patches</A></H2>
+<P>
+
+First, (see section <A HREF="general.html#SEC24">4.3 Coding Rules</A>) above if you did not yet.
+
+When you submit your patch, try to send a unified diff (diff '-up'
+option). We cannot read other diffs :-)
+
+Also please do not submit a patch which contains several unrelated changes.
+Split it into separate, self-contained pieces. This does not mean splitting
+file by file. Instead, make the patch as small as possible while still
+keeping it as a logical unit that contains an individual change, even
+if it spans multiple files. This makes reviewing your patches much easier
+for us and greatly increases your chances of getting your patch applied.
+
+Run the regression tests before submitting a patch so that you can
+verify that there are no big problems.
+
+Patches should be posted as base64 encoded attachments (or any other
+encoding which ensures that the patch will not be trashed during
+transmission) to the ffmpeg-devel mailing list, see
+<A HREF="http://lists.mplayerhq.hu/mailman/listinfo/ffmpeg-devel">http://lists.mplayerhq.hu/mailman/listinfo/ffmpeg-devel</A>
+
+It also helps quite a bit if you tell us what the patch does (for example
+'replaces lrint by lrintf'), and why (for example '*BSD isn't C99 compliant
+and has no lrint()')
+
+Also please if you send several patches, send each patch as a separate mail,
+do not attach several unrelated patches to the same mail.
+
+
+
+<H2><A NAME="SEC27" HREF="general.html#TOC27">4.6 New codecs or formats checklist</A></H2>
+<P>
+
+
+<OL>
+<LI>
+
+    Did you use av_cold for codec initialization and close functions?
+<LI>
+
+    Did you add a long_name under NULL_IF_CONFIG_SMALL to the AVCodec or
+    AVInputFormat/AVOutputFormat struct?
+<LI>
+
+    Did you bump the minor version number in <TT>`avcodec.h'</TT> or
+    <TT>`avformat.h'</TT>?
+<LI>
+
+    Did you register it in <TT>`allcodecs.c'</TT> or <TT>`allformats.c'</TT>?
+<LI>
+
+    Did you add the CodecID to <TT>`avcodec.h'</TT>?
+<LI>
+
+    If it has a fourcc, did you add it to <TT>`libavformat/riff.c'</TT>,
+    even if it is only a decoder?
+<LI>
+
+    Did you add a rule to compile the appropriate files in the Makefile?
+    Remember to do this even if you're just adding a format to a file that is
+    already being compiled by some other rule, like a raw demuxer.
+<LI>
+
+    Did you add an entry to the table of supported formats or codecs in the
+    documentation?
+<LI>
+
+    Did you add an entry in the Changelog?
+<LI>
+
+    If it depends on a parser or a library, did you add that dependency in
+    configure?
+<LI>
+
+    Did you "svn add" the appropriate files before commiting?
+</OL>
+
+<P>
+
+
+
+<H2><A NAME="SEC28" HREF="general.html#TOC28">4.7 patch submission checklist</A></H2>
+<P>
+
+
+<OL>
+<LI>
+
+    Do the regression tests pass with the patch applied?
+<LI>
+
+    Does <CODE>make checkheaders</CODE> pass with the patch applied?
+<LI>
+
+    Is the patch a unified diff?
+<LI>
+
+    Is the patch against latest FFmpeg SVN?
+<LI>
+
+    Are you subscribed to ffmpeg-dev?
+    (the list is subscribers only due to spam)
+<LI>
+
+    Have you checked that the changes are minimal, so that the same cannot be
+    achieved with a smaller patch and/or simpler final code?
+<LI>
+
+    If the change is to speed critical code, did you benchmark it?
+<LI>
+
+    If you did any benchmarks, did you provide them in the mail?
+<LI>
+
+    Have you checked that the patch does not introduce buffer overflows or
+    other security issues?
+<LI>
+
+    Did you test your decoder or demuxer against damaged data? If no, see
+    tools/trasher and the noise bitstream filter. Your decoder or demuxer
+    should not crash or end in a (near) infinite loop when fed damaged data.
+<LI>
+
+    Is the patch created from the root of the source tree, so it can be
+    applied with <CODE>patch -p0</CODE>?
+<LI>
+
+    Does the patch not mix functional and cosmetic changes?
+<LI>
+
+    Did you add tabs or trailing whitespace to the code? Both are forbidden.
+<LI>
+
+    Is the patch attached to the email you send?
+<LI>
+
+    Is the mime type of the patch correct? It should be text/x-diff or
+    text/x-patch or at least text/plain and not application/octet-stream.
+<LI>
+
+    If the patch fixes a bug, did you provide a verbose analysis of the bug?
+<LI>
+
+    If the patch fixes a bug, did you provide enough information, including
+    a sample, so the bug can be reproduced and the fix can be verified?
+    Note please do not attach samples &#62;100k to mails but rather provide a
+    URL, you can upload to ftp://upload.ffmpeg.org
+<LI>
+
+    Did you provide a verbose summary about what the patch does change?
+<LI>
+
+    Did you provide a verbose explanation why it changes things like it does?
+<LI>
+
+    Did you provide a verbose summary of the user visible advantages and
+    disadvantages if the patch is applied?
+<LI>
+
+    Did you provide an example so we can verify the new feature added by the
+    patch easily?
+<LI>
+
+    If you added a new file, did you insert a license header? It should be
+    taken from FFmpeg, not randomly copied and pasted from somewhere else.
+<LI>
+
+    You should maintain alphabetical order in alphabetically ordered lists as
+    long as doing so does not break API/ABI compatibility.
+<LI>
+
+    Lines with similar content should be aligned vertically when doing so
+    improves readability.
+<LI>
+
+    Did you provide a suggestion for a clear commit log message?
+</OL>
+
+<P>
+
+
+
+<H2><A NAME="SEC29" HREF="general.html#TOC29">4.8 Patch review process</A></H2>
+<P>
+
+All patches posted to ffmpeg-devel will be reviewed, unless they contain a
+clear note that the patch is not for SVN.
+Reviews and comments will be posted as replies to the patch on the
+mailing list. The patch submitter then has to take care of every comment,
+that can be by resubmitting a changed patch or by discussion. Resubmitted
+patches will themselves be reviewed like any other patch. If at some point
+a patch passes review with no comments then it is approved, that can for
+simple and small patches happen immediately while large patches will generally
+have to be changed and reviewed many times before they are approved.
+After a patch is approved it will be committed to the repository.
+
+We will review all submitted patches, but sometimes we are quite busy so
+especially for large patches this can take several weeks.
+
+When resubmitting patches, please do not make any significant changes
+not related to the comments received during review. Such patches will
+be rejected. Instead, submit  significant changes or new features as
+separate patches.
+
+
+
+<H2><A NAME="SEC30" HREF="general.html#TOC30">4.9 Regression tests</A></H2>
+<P>
+
+Before submitting a patch (or committing to the repository), you should at least
+test that you did not break anything.
+
+The regression tests build a synthetic video stream and a synthetic
+audio stream. These are then encoded and decoded with all codecs or
+formats. The CRC (or MD5) of each generated file is recorded in a
+result file. A 'diff' is launched to compare the reference results and
+the result file.
+
+The regression tests then go on to test the FFserver code with a
+limited set of streams. It is important that this step runs correctly
+as well.
+
+Run 'make test' to test all the codecs and formats.
+
+Run 'make fulltest' to test all the codecs, formats and FFserver.
+
+[Of course, some patches may change the results of the regression tests. In
+this case, the reference results of the regression tests shall be modified
+accordingly].
+
+<P><HR><P>
+This document was generated on 13 January 2009 using
+<A HREF="http://wwwinfo.cern.ch/dis/texi2html/">texi2html</A>&nbsp;1.56k.
+</BODY>
+</HTML>

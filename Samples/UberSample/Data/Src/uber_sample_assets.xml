@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assets rootSrcDir="." rootExpDir="../Exp" rootDepDir="../Dep">
+
+  <!-- Common assets -->
+
+  <assetGroup name="common/common_assets.xml"/>
+
+  <!-- Postprocesses assets -->
+
+  <assetGroup name="postprocesses/postprocesses_assets.xml"/>
+
+  <!-- Scenes -->
+
+  <asset name="scenes/designer_home"/>
+
+  <!-- Model sample data -->
+
+  <asset name="model_sample/test_model"/>
+  <asset name="model_sample/test_anim"/>
+  <asset name="model_sample/test_tex"/>
+
+  <!-- Postprocessing sample data -->
+
+  <asset name="postprocessing_sample/chair_model"/>
+  <asset name="postprocessing_sample/chair_tex"/>
+
+  <!-- Multiple Render Targets sample data -->
+
+  <asset name="mrt_sample/mrt_model_vs"/>
+  <asset name="mrt_sample/mrt_model_fs"/>
+
+  <!-- Environment Mapping sample data -->
+
+  <asset name="env_mapping_sample/env_model_vs"/>
+  <asset name="env_mapping_sample/env_model_fs"/>
+  <asset name="env_mapping_sample/env_cubemap"/>
+
+  <!-- Streaming sample data -->
+
+  <asset name="streaming_sample/texture_0"/>
+  <asset name="streaming_sample/texture_1"/>
+  <asset name="streaming_sample/texture_2"/>
+  <asset name="streaming_sample/texture_3"/>
+
+  <!-- Quake 3 Level sample data -->
+
+  <asset name="quake3_level_sample/test_level"/>
+
+  <!-- UI sample data -->
+
+  <assetGroup name="ui_sample/ui_sample_assets.xml"/>
+
+  <!-- RTS sample data -->
+
+  <assetGroup name="rts_sample/rts_sample_assets.xml"/>
+
+</assets>

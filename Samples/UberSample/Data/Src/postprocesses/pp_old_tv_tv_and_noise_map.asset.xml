@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="asset_defs/texture">
+  <paramGroup name="all">
+    <param name="source" value="postprocesses/pp_old_tv_tv_and_noise.dds"/>
+    <param name="format" value="DXT1"/>
+    <param name="storage" value="GPU"/>
+  </paramGroup>
+</asset>

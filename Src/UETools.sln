@@ -1,0 +1,215 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AFSPacker", "Tools\AFSPacker\AFSPacker.vcproj", "{AD7D8C52-9ED8-4B5E-BD30-BDAE5E800984}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692} = {B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AFSUnpacker", "Tools\AFSUnpacker\AFSUnpacker.vcproj", "{D8AAEE6C-42A3-4896-BFB0-076C311925CE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692} = {B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ToolsCommon", "Tools\ToolsCommon\ToolsCommon.vcproj", "{B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ModelCompiler_Collada", "Tools\ModelCompiler_Collada\ModelCompiler_Collada.vcproj", "{4FE4BDD5-E6FA-473F-BE97-B29E4602B5B3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4F24BDD5-E6FA-473F-BE97-B29E4612B5B3} = {4F24BDD5-E6FA-473F-BE97-B29E4612B5B3}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ModelCompiler_Assimp", "Tools\ModelCompiler_Assimp\ModelCompiler_Assimp.vcproj", "{4FE4BDD5-E6FA-473F-BE97-B29F4602B5B3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4F24BDD5-E6FA-473F-BE97-B29E4612B5B3} = {4F24BDD5-E6FA-473F-BE97-B29E4612B5B3}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AnimationCompiler_Assimp", "Tools\AnimationCompiler_Assimp\AnimationCompiler_Assimp.vcproj", "{4FE4BDD5-E6FA-473F-BE97-B29F5602B5B3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4FE4BDD5-E6FA-483F-BE97-B29F5602B5B3} = {4FE4BDD5-E6FA-483F-BE97-B29F5602B5B3}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EffectCompiler", "Tools\EffectCompiler\EffectCompiler.vcproj", "{4FE4BDD5-E6FA-474F-BF97-B29E4602B5B3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692} = {B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FontCompiler_FreeType", "Tools\FontCompiler_FreeType\FontCompiler_FreeType.vcproj", "{606523E3-2432-41B8-A2F3-B606335E5893}"
+	ProjectSection(ProjectDependencies) = postProject
+		{606523A4-2432-41B8-A2F3-B606335E5893} = {606523A4-2432-41B8-A2F3-B606335E5893}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TextureCompiler_D3DX", "Tools\TextureCompiler_D3DX\TextureCompiler_D3DX.vcproj", "{4FE4BDD5-E6FA-473F-BF97-B29E4602B5B3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4FA4BDD5-E6FA-473F-BF97-B29E4602B5B3} = {4FA4BDD5-E6FA-473F-BF97-B29E4602B5B3}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ModelCompiler_Quake3Level", "Tools\ModelCompiler_Quake3Level\ModelCompiler_Quake3Level.vcproj", "{4F24BDD5-E6FA-473F-BE97-B29E4602B5B3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4F24BDD5-E6FA-473F-BE97-B29E4612B5B3} = {4F24BDD5-E6FA-473F-BE97-B29E4612B5B3}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PhysicsCompiler_PhysX", "Tools\PhysicsCompiler_PhysX\PhysicsCompiler_PhysX.vcproj", "{4F24BDD5-E6FA-473F-BE97-B29E4102B5B3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692} = {B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PhysicsCompiler_Bullet", "Tools\PhysicsCompiler_Bullet\PhysicsCompiler_Bullet.vcproj", "{4F24BDD5-E6FA-473F-BE97-B29E4102B5B7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692} = {B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ModelCompiler_Common", "Tools\ModelCompiler_Common\ModelCompiler_Common.vcproj", "{4F24BDD5-E6FA-473F-BE97-B29E4612B5B3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692} = {B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AnimationCompiler_Common", "Tools\AnimationCompiler_Common\AnimationCompiler_Common.vcproj", "{4FE4BDD5-E6FA-483F-BE97-B29F5602B5B3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692} = {B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AnimationCompiler_Collada", "Tools\AnimationCompiler_Collada\AnimationCompiler_Collada.vcproj", "{59B4BFCE-ED7A-4B14-AB83-DD0874E1C4AA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4FE4BDD5-E6FA-483F-BE97-B29F5602B5B3} = {4FE4BDD5-E6FA-483F-BE97-B29F5602B5B3}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ShaderCompiler_D3D9", "Tools\ShaderCompiler_D3D9\ShaderCompiler_D3D9.vcproj", "{758F82F3-06A6-4028-931A-A5EF0EB120EE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{758F82F3-06A6-4028-932B-A5EF0EB120EE} = {758F82F3-06A6-4028-932B-A5EF0EB120EE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ShaderCompiler_Common", "Tools\ShaderCompiler_Common\ShaderCompiler_Common.vcproj", "{758F82F3-06A6-4028-932B-A5EF0EB120EE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692} = {B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FontCompiler_Common", "Tools\FontCompiler_Common\FontCompiler_Common.vcproj", "{606523A4-2432-41B8-A2F3-B606335E5893}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692} = {B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TextureCompiler_Common", "Tools\TextureCompiler_Common\TextureCompiler_Common.vcproj", "{4FA4BDD5-E6FA-473F-BF97-B29E4602B5B3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692} = {B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ShaderCompiler_Cg", "Tools\ShaderCompiler_Cg\ShaderCompiler_Cg.vcproj", "{758F82F3-06A6-4028-939A-A5EF0EB120EE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{758F82F3-06A6-4028-932B-A5EF0EB120EE} = {758F82F3-06A6-4028-932B-A5EF0EB120EE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TextureCompiler_NVTT", "Tools\TextureCompiler_NVTT\TextureCompiler_NVTT.vcproj", "{4FE4B115-E6FA-473F-BF97-B29E4602B5B3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4FA4BDD5-E6FA-473F-BF97-B29E4602B5B3} = {4FA4BDD5-E6FA-473F-BF97-B29E4602B5B3}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lightmapper", "Tools\Lightmapper\Lightmapper.vcproj", "{80F875EF-6663-4D8A-B059-4085EC46256F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ShaderCompiler_D3D11", "Tools\ShaderCompiler_D3D11\ShaderCompiler_D3D11.vcproj", "{758F82F3-06A6-4028-931A-A5EF2AB120EE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{758F82F3-06A6-4028-932B-A5EF0EB120EE} = {758F82F3-06A6-4028-932B-A5EF0EB120EE}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD7D8C52-9ED8-4B5E-BD30-BDAE5E800984}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AD7D8C52-9ED8-4B5E-BD30-BDAE5E800984}.Debug|Win32.Build.0 = Debug|Win32
+		{AD7D8C52-9ED8-4B5E-BD30-BDAE5E800984}.Release|Win32.ActiveCfg = Release|Win32
+		{AD7D8C52-9ED8-4B5E-BD30-BDAE5E800984}.Release|Win32.Build.0 = Release|Win32
+		{D8AAEE6C-42A3-4896-BFB0-076C311925CE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D8AAEE6C-42A3-4896-BFB0-076C311925CE}.Debug|Win32.Build.0 = Debug|Win32
+		{D8AAEE6C-42A3-4896-BFB0-076C311925CE}.Release|Win32.ActiveCfg = Release|Win32
+		{D8AAEE6C-42A3-4896-BFB0-076C311925CE}.Release|Win32.Build.0 = Release|Win32
+		{B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692}.Debug|Win32.Build.0 = Debug|Win32
+		{B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692}.Release|Win32.ActiveCfg = Release|Win32
+		{B0DB3CC3-6D9E-4486-9086-5ACAC4B6E692}.Release|Win32.Build.0 = Release|Win32
+		{4FE4BDD5-E6FA-473F-BE97-B29E4602B5B3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4FE4BDD5-E6FA-473F-BE97-B29E4602B5B3}.Debug|Win32.Build.0 = Debug|Win32
+		{4FE4BDD5-E6FA-473F-BE97-B29E4602B5B3}.Release|Win32.ActiveCfg = Release|Win32
+		{4FE4BDD5-E6FA-473F-BE97-B29E4602B5B3}.Release|Win32.Build.0 = Release|Win32
+		{4FE4BDD5-E6FA-473F-BE97-B29F4602B5B3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4FE4BDD5-E6FA-473F-BE97-B29F4602B5B3}.Debug|Win32.Build.0 = Debug|Win32
+		{4FE4BDD5-E6FA-473F-BE97-B29F4602B5B3}.Release|Win32.ActiveCfg = Release|Win32
+		{4FE4BDD5-E6FA-473F-BE97-B29F4602B5B3}.Release|Win32.Build.0 = Release|Win32
+		{4FE4BDD5-E6FA-473F-BE97-B29F5602B5B3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4FE4BDD5-E6FA-473F-BE97-B29F5602B5B3}.Debug|Win32.Build.0 = Debug|Win32
+		{4FE4BDD5-E6FA-473F-BE97-B29F5602B5B3}.Release|Win32.ActiveCfg = Release|Win32
+		{4FE4BDD5-E6FA-473F-BE97-B29F5602B5B3}.Release|Win32.Build.0 = Release|Win32
+		{4FE4BDD5-E6FA-474F-BF97-B29E4602B5B3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4FE4BDD5-E6FA-474F-BF97-B29E4602B5B3}.Debug|Win32.Build.0 = Debug|Win32
+		{4FE4BDD5-E6FA-474F-BF97-B29E4602B5B3}.Release|Win32.ActiveCfg = Release|Win32
+		{4FE4BDD5-E6FA-474F-BF97-B29E4602B5B3}.Release|Win32.Build.0 = Release|Win32
+		{606523E3-2432-41B8-A2F3-B606335E5893}.Debug|Win32.ActiveCfg = Debug|Win32
+		{606523E3-2432-41B8-A2F3-B606335E5893}.Debug|Win32.Build.0 = Debug|Win32
+		{606523E3-2432-41B8-A2F3-B606335E5893}.Release|Win32.ActiveCfg = Release|Win32
+		{606523E3-2432-41B8-A2F3-B606335E5893}.Release|Win32.Build.0 = Release|Win32
+		{4FE4BDD5-E6FA-473F-BF97-B29E4602B5B3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4FE4BDD5-E6FA-473F-BF97-B29E4602B5B3}.Debug|Win32.Build.0 = Debug|Win32
+		{4FE4BDD5-E6FA-473F-BF97-B29E4602B5B3}.Release|Win32.ActiveCfg = Release|Win32
+		{4FE4BDD5-E6FA-473F-BF97-B29E4602B5B3}.Release|Win32.Build.0 = Release|Win32
+		{4F24BDD5-E6FA-473F-BE97-B29E4602B5B3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4F24BDD5-E6FA-473F-BE97-B29E4602B5B3}.Debug|Win32.Build.0 = Debug|Win32
+		{4F24BDD5-E6FA-473F-BE97-B29E4602B5B3}.Release|Win32.ActiveCfg = Release|Win32
+		{4F24BDD5-E6FA-473F-BE97-B29E4602B5B3}.Release|Win32.Build.0 = Release|Win32
+		{4F24BDD5-E6FA-473F-BE97-B29E4102B5B3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4F24BDD5-E6FA-473F-BE97-B29E4102B5B3}.Debug|Win32.Build.0 = Debug|Win32
+		{4F24BDD5-E6FA-473F-BE97-B29E4102B5B3}.Release|Win32.ActiveCfg = Release|Win32
+		{4F24BDD5-E6FA-473F-BE97-B29E4102B5B3}.Release|Win32.Build.0 = Release|Win32
+		{4F24BDD5-E6FA-473F-BE97-B29E4102B5B7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4F24BDD5-E6FA-473F-BE97-B29E4102B5B7}.Debug|Win32.Build.0 = Debug|Win32
+		{4F24BDD5-E6FA-473F-BE97-B29E4102B5B7}.Release|Win32.ActiveCfg = Release|Win32
+		{4F24BDD5-E6FA-473F-BE97-B29E4102B5B7}.Release|Win32.Build.0 = Release|Win32
+		{4F24BDD5-E6FA-473F-BE97-B29E4612B5B3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4F24BDD5-E6FA-473F-BE97-B29E4612B5B3}.Debug|Win32.Build.0 = Debug|Win32
+		{4F24BDD5-E6FA-473F-BE97-B29E4612B5B3}.Release|Win32.ActiveCfg = Release|Win32
+		{4F24BDD5-E6FA-473F-BE97-B29E4612B5B3}.Release|Win32.Build.0 = Release|Win32
+		{4FE4BDD5-E6FA-483F-BE97-B29F5602B5B3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4FE4BDD5-E6FA-483F-BE97-B29F5602B5B3}.Debug|Win32.Build.0 = Debug|Win32
+		{4FE4BDD5-E6FA-483F-BE97-B29F5602B5B3}.Release|Win32.ActiveCfg = Release|Win32
+		{4FE4BDD5-E6FA-483F-BE97-B29F5602B5B3}.Release|Win32.Build.0 = Release|Win32
+		{59B4BFCE-ED7A-4B14-AB83-DD0874E1C4AA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{59B4BFCE-ED7A-4B14-AB83-DD0874E1C4AA}.Debug|Win32.Build.0 = Debug|Win32
+		{59B4BFCE-ED7A-4B14-AB83-DD0874E1C4AA}.Release|Win32.ActiveCfg = Release|Win32
+		{59B4BFCE-ED7A-4B14-AB83-DD0874E1C4AA}.Release|Win32.Build.0 = Release|Win32
+		{758F82F3-06A6-4028-931A-A5EF0EB120EE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{758F82F3-06A6-4028-931A-A5EF0EB120EE}.Debug|Win32.Build.0 = Debug|Win32
+		{758F82F3-06A6-4028-931A-A5EF0EB120EE}.Release|Win32.ActiveCfg = Release|Win32
+		{758F82F3-06A6-4028-931A-A5EF0EB120EE}.Release|Win32.Build.0 = Release|Win32
+		{758F82F3-06A6-4028-932B-A5EF0EB120EE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{758F82F3-06A6-4028-932B-A5EF0EB120EE}.Debug|Win32.Build.0 = Debug|Win32
+		{758F82F3-06A6-4028-932B-A5EF0EB120EE}.Release|Win32.ActiveCfg = Release|Win32
+		{758F82F3-06A6-4028-932B-A5EF0EB120EE}.Release|Win32.Build.0 = Release|Win32
+		{606523A4-2432-41B8-A2F3-B606335E5893}.Debug|Win32.ActiveCfg = Debug|Win32
+		{606523A4-2432-41B8-A2F3-B606335E5893}.Debug|Win32.Build.0 = Debug|Win32
+		{606523A4-2432-41B8-A2F3-B606335E5893}.Release|Win32.ActiveCfg = Release|Win32
+		{606523A4-2432-41B8-A2F3-B606335E5893}.Release|Win32.Build.0 = Release|Win32
+		{4FA4BDD5-E6FA-473F-BF97-B29E4602B5B3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4FA4BDD5-E6FA-473F-BF97-B29E4602B5B3}.Debug|Win32.Build.0 = Debug|Win32
+		{4FA4BDD5-E6FA-473F-BF97-B29E4602B5B3}.Release|Win32.ActiveCfg = Release|Win32
+		{4FA4BDD5-E6FA-473F-BF97-B29E4602B5B3}.Release|Win32.Build.0 = Release|Win32
+		{758F82F3-06A6-4028-939A-A5EF0EB120EE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{758F82F3-06A6-4028-939A-A5EF0EB120EE}.Debug|Win32.Build.0 = Debug|Win32
+		{758F82F3-06A6-4028-939A-A5EF0EB120EE}.Release|Win32.ActiveCfg = Release|Win32
+		{758F82F3-06A6-4028-939A-A5EF0EB120EE}.Release|Win32.Build.0 = Release|Win32
+		{4FE4B115-E6FA-473F-BF97-B29E4602B5B3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4FE4B115-E6FA-473F-BF97-B29E4602B5B3}.Debug|Win32.Build.0 = Debug|Win32
+		{4FE4B115-E6FA-473F-BF97-B29E4602B5B3}.Release|Win32.ActiveCfg = Release|Win32
+		{4FE4B115-E6FA-473F-BF97-B29E4602B5B3}.Release|Win32.Build.0 = Release|Win32
+		{80F875EF-6663-4D8A-B059-4085EC46256F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{80F875EF-6663-4D8A-B059-4085EC46256F}.Debug|Win32.Build.0 = Debug|Win32
+		{80F875EF-6663-4D8A-B059-4085EC46256F}.Release|Win32.ActiveCfg = Release|Win32
+		{80F875EF-6663-4D8A-B059-4085EC46256F}.Release|Win32.Build.0 = Release|Win32
+		{758F82F3-06A6-4028-931A-A5EF2AB120EE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{758F82F3-06A6-4028-931A-A5EF2AB120EE}.Debug|Win32.Build.0 = Debug|Win32
+		{758F82F3-06A6-4028-931A-A5EF2AB120EE}.Release|Win32.ActiveCfg = Release|Win32
+		{758F82F3-06A6-4028-931A-A5EF2AB120EE}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

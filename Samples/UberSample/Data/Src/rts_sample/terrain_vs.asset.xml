@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="asset_defs/vertex_shader">
+  <paramGroup name="all">
+    <param name="source" value="rts_sample/rts_sample_shaders.fx"/>
+    <param name="entry" value="Terrain_VS"/>
+  </paramGroup>
+</asset>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="asset_defs/model">
+  <paramGroup name="all">
+    <param name="makeStatic" value="true"/>
+    <param name="preserveUnusedBones" value="true"/>
+    <param name="quake3_extractSpawnPoints" value="true"/>
+  </paramGroup>
+  <paramGroup name="linux-bullet">
+    <param name="compiler" value="ModelCompiler_Quake3Level.run"/>
+  </paramGroup>
+  <paramGroup name="win32-physx-gl">
+    <param name="compiler" value="ModelCompiler_Quake3Level.exe"/>
+  </paramGroup>
+  <paramGroup name="win32-bullet-gl">
+    <param name="compiler" value="ModelCompiler_Quake3Level.exe"/>
+  </paramGroup>
+  <paramGroup name="win32-physx-d3d9">
+    <param name="compiler" value="ModelCompiler_Quake3Level.exe"/>
+  </paramGroup>
+  <paramGroup name="win32-physx-d3d11">
+    <param name="compiler" value="ModelCompiler_Quake3Level.exe"/>
+  </paramGroup>
+  <paramGroup name="win32-bullet-d3d9">
+    <param name="compiler" value="ModelCompiler_Quake3Level.exe"/>
+  </paramGroup>
+  <paramGroup name="win32-bullet-d3d11">
+    <param name="compiler" value="ModelCompiler_Quake3Level.exe"/>
+  </paramGroup>
+  <paramGroup name="x360">
+    <param name="compiler" value="ModelCompiler_Quake3Level_X360.exe"/>
+  </paramGroup>
+  <paramGroup name="ps3">
+    <param name="compiler" value="ModelCompiler_Quake3Level_PS3.exe"/>
+  </paramGroup>
+</asset>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="" type="effect">
+  <paramGroup name="all">
+    <param name="source"/>
+  </paramGroup>
+  <paramGroup name="linux">
+    <param name="compiler" value="EffectCompiler.run"/>
+  </paramGroup>
+  <paramGroup name="marmalade">
+    <param name="compiler" value="EffectCompiler.exe"/>
+  </paramGroup>
+  <paramGroup name="win32">
+    <param name="compiler" value="EffectCompiler.exe"/>
+  </paramGroup>
+  <paramGroup name="x360">
+    <param name="compiler" value="EffectCompiler_X360.exe"/>
+  </paramGroup>
+  <paramGroup name="ps3">
+    <param name="compiler" value="EffectCompiler_PS3.exe"/>
+  </paramGroup>
+</asset>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="asset_defs/texture">
+  <paramGroup name="all">
+    <param name="source" value="common/cursor.png"/>
+    <param name="storage" value="GPU"/>
+    <param name="format" value="B8G8R8A8"/>
+    <param name="width" value="16"/>
+    <param name="height" value="32"/>
+    <param name="rescaleMethod" value="None"/>
+  </paramGroup>
+  <paramGroup name="win32-gles">
+    <param name="storage" value="GPU"/>
+    <param name="format" value="R8G8B8A8"/>
+  </paramGroup>
+</asset>

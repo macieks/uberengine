@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<targets>
+  <target name="base">
+    <config assetType="default" configName="common"/>
+  </target>
+  <target name="win32" parent="base">
+    <config assetType="animation" configName="win32"/>
+    <config assetType="effect" configName="win32"/>
+  </target>
+  <target name="linux" parent="base">
+    <config assetType="animation" configName="linux"/>
+  </target>
+  <target name="linux-bullet-gl" parent="linux">
+    <config assetType="model" configName="linux-bullet"/>
+    <config assetType="font" configName="linux"/>
+    <config assetType="texture" configName="linux"/>
+    <config assetType="shader" configName="linux-glsl"/>
+  </target>
+  <target name="win32-gl" parent="win32">
+    <config assetType="font" configName="win32-gl"/>
+    <config assetType="texture" configName="win32-gl"/>
+    <config assetType="shader" configName="win32-glsl"/>
+  </target>
+  <target name="win32-gles" parent="win32">
+    <config assetType="font" configName="win32-gl"/>
+    <config assetType="texture" configName="win32-gles"/>
+    <config assetType="shader" configName="win32-gles"/>
+  </target>
+  <target name="win32-physx-gl" parent="win32-gl">
+    <config assetType="model" configName="win32-physx-gl"/>
+  </target>
+  <target name="win32-physx-gles" parent="win32-gles">
+    <config assetType="model" configName="win32-physx-gl"/>
+  </target>
+  <target name="win32-bullet-gl" parent="win32-gl">
+    <config assetType="model" configName="win32-bullet-gl"/>
+  </target>
+  <target name="win32-d3d9" parent="win32">
+    <config assetType="font" configName="win32-d3d9"/>
+    <config assetType="texture" configName="win32-d3d9"/>
+  </target>
+  <target name="win32-d3d11" parent="win32">
+    <config assetType="font" configName="win32-d3d11"/>
+    <config assetType="texture" configName="win32-d3d11"/>
+  </target>
+  <target name="win32-physx-d3d9_sm30" parent="win32-d3d9">
+    <config assetType="model" configName="win32-physx-d3d9"/>
+    <config assetType="shader" configName="win32-d3d9_sm30"/>
+  </target>
+  <target name="win32-physx-d3d9_sm20" parent="win32-d3d9">
+    <config assetType="model" configName="win32-physx-d3d9"/>
+    <config assetType="shader" configName="win32-d3d9_sm20"/>
+  </target>
+  <target name="win32-physx-d3d9_sm14" parent="win32-d3d9">
+    <config assetType="model" configName="win32-physx-d3d9"/>
+    <config assetType="shader" configName="win32-d3d9_sm14"/>
+  </target>
+  <target name="win32-physx-d3d11_sm40" parent="win32-d3d11">
+    <config assetType="model" configName="win32-physx-d3d11"/>
+    <config assetType="shader" configName="win32-d3d11_sm40"/>
+  </target>
+  <target name="win32-bullet-d3d9_sm30" parent="win32-d3d9">
+    <config assetType="model" configName="win32-bullet-d3d9"/>
+    <config assetType="shader" configName="win32-d3d9_sm30"/>
+  </target>
+  <target name="win32-bullet-d3d9_sm20" parent="win32-d3d9">
+    <config assetType="model" configName="win32-bullet-d3d9"/>
+    <config assetType="shader" configName="win32-d3d9_sm20"/>
+  </target>
+  <target name="win32-bullet-d3d9_sm14" parent="win32-d3d9">
+    <config assetType="model" configName="win32-bullet-d3d9"/>
+    <config assetType="shader" configName="win32-d3d9_sm14"/>
+  </target>
+  <target name="marmalade" parent="base">
+	<config assetType="texture" configName="marmalade"/>
+    <config assetType="effect" configName="marmalade"/>
+	<config assetType="shader" configName="none"/>
+	<config assetType="font" configName="marmalade"/>
+  </target>
+  <target name="marmalade-ios" parent="base">
+	<config assetType="texture" configName="marmalade-ios"/>
+	<config assetType="effect" configName="marmalade"/>
+	<config assetType="shader" configName="marmalade-gles"/>
+	<config assetType="font" configName="marmalade-ios"/>
+  </target>
+</targets>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assets>
+
+  <!-- Terrain shaders -->
+  <asset name="rts_sample/terrain_vs"/>
+  <asset name="rts_sample/terrain_fs"/>
+
+  <!-- Terrain textures (3 layers + detail map) -->
+  <asset name="rts_sample/terrain0"/>
+  <asset name="rts_sample/terrain1"/>
+  <asset name="rts_sample/terrain2"/>
+  <asset name="rts_sample/detailmap"/>
+
+  <!-- Character textures -->
+  <asset name="rts_sample/soldiermap0"/>
+  <asset name="rts_sample/soldiermap1"/>
+
+  <!-- Character model -->
+  <asset name="rts_sample/soldier"/>
+
+  <!-- Character animation -->
+  <asset name="rts_sample/walk_anim"/>
+
+</assets>

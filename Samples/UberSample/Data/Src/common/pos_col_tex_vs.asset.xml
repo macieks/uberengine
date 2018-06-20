@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="asset_defs/vertex_shader">
+  <paramGroup name="all">
+    <param name="source" value="common/debug_shaders.fx"/>
+    <param name="entry" value="pos_col_tex_vs"/>
+  </paramGroup>
+</asset>

@@ -1,0 +1,1 @@
+trace: gl::Context::makeCurrent(281): MaxTextureDimension=16384, MaxCubeTextureDimension=16384, MaxRenderbufferDimension=16384, MaxTextureLevel=15, MaxTextureAnisotropy=16.000000

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="asset_defs/animation">
+  <paramGroup name="all">
+    <param name="source" value="model_sample/JaiquaFromXSI.dae"/>
+    <param name="minFrequency" value="0.01"/>
+  </paramGroup>
+  <paramGroup name="linux">
+    <param name="compiler" value="AnimationCompiler_Collada.run"/>
+  </paramGroup>
+  <paramGroup name="win32">
+    <param name="compiler" value="AnimationCompiler_Collada.exe"/>
+  </paramGroup>
+  <paramGroup name="x360">
+    <param name="compiler" value="AnimationCompiler_Collada_X360.exe"/>
+  </paramGroup>
+  <paramGroup name="ps3">
+    <param name="compiler" value="AnimationCompiler_Collada_PS3.exe"/>
+  </paramGroup>
+</asset>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="asset_defs/model">
+  <paramGroup name="linux-bullet">
+    <param name="compiler" value="ModelCompiler_Collada.run"/>
+  </paramGroup>
+  <paramGroup name="win32-physx-gl">
+    <param name="compiler" value="ModelCompiler_Collada.exe"/>
+  </paramGroup>
+  <paramGroup name="win32-bullet-gl">
+    <param name="compiler" value="ModelCompiler_Collada.exe"/>
+  </paramGroup>
+  <paramGroup name="win32-physx-d3d9">
+    <param name="compiler" value="ModelCompiler_Collada.exe"/>
+  </paramGroup>
+  <paramGroup name="win32-physx-d3d11">
+    <param name="compiler" value="ModelCompiler_Collada.exe"/>
+  </paramGroup>
+  <paramGroup name="win32-bullet-d3d9">
+    <param name="compiler" value="ModelCompiler_Collada.exe"/>
+  </paramGroup>
+  <paramGroup name="win32-bullet-d3d11">
+    <param name="compiler" value="ModelCompiler_Collada.exe"/>
+  </paramGroup>
+  <paramGroup name="x360">
+    <param name="compiler" value="ModelCompiler_Collada_X360.exe"/>
+  </paramGroup>
+  <paramGroup name="ps3">
+    <param name="compiler" value="ModelCompiler_Collada_PS3.exe"/>
+  </paramGroup>
+</asset>

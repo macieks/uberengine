@@ -1,0 +1,139 @@
+MICROSOFT SOFTWARE LICENSE TERMS
+
+MICROSOFT WINDOWS MEDIA FORMAT SOFTWARE DEVELOPMENT KIT 11
+
+These license terms are an agreement between Microsoft Corporation (or based on where you live, one of its affiliates) and you.  Please read them.  They apply to the software named above, which includes the media on which you received it, if any.  The terms also apply to any Microsoft
+
+•	updates (subject to section 3 (h) below),
+•	supplements,
+•	Internet-based services, and 
+•	support services
+
+for this software, unless other terms accompany those items.  If so, those terms apply.
+
+BY USING THE SOFTWARE, YOU ACCEPT THESE TERMS.  IF YOU DO NOT ACCEPT THEM, DO NOT USE THE SOFTWARE.
+
+If you comply with these license terms, you have the rights below.
+
+1.	DEFINITIONS USED IN THESE LICENSE TERMS
+
+a.	"Advanced Systems Format" or "ASF" means the current version of the extensible file storage format developed by or for Microsoft for authoring, editing, archiving, distributing, streaming, playing, referencing, or otherwise manipulating Content, as used by the Windows Media technologies. 
+
+b.	"ASF Content" means Content contained within ASF and optionally protected with DRM.
+
+c.	"ASF File" means a file that solely contains ASF Content.
+
+d.	"Content" means digital audio (including, but not limited to, timeline-synchronized audio, music, voice, or sounds), digital video, and other digital information including data, text (including, but not limited to, script command data and related metadata such as a song title or an artist’s name), animation, graphics, photographs, and artwork, and combinations of any or all of the foregoing.
+
+e.	“DRM” means Microsoft’s digital rights management technology.
+
+f.	"Updates" means all subsequent public releases of software including public beta releases, maintenance releases, error corrections, upgrades, enhancements, additions, improvements, extensions, modifications and successor versions.
+
+g.	"WM Codecs" means all versions of the compression/decompression algorithms ("codecs") named "Windows Media Audio", "Windows Media Video", "Windows Media Screen", "Microsoft MPEG-4 codec", and any other codecs designated as "Windows Media" or "WM" codecs released by Microsoft for use with the software.
+
+h.	"WM Metafile" means a metafile that controls the local and/or streamed rendering of Content and conforms to the XML-based metafile format defined in the Windows Media Player Software Development Kit.
+
+2.	INSTALLATION AND USE RIGHTS.  
+
+a.	Installation and Use.  You may install and use one copy of the software on your device to design, develop and test your programs that utilize Microsoft Windows Media technology (i) to encode, decode, and/or render Content designed and intended for use solely on the OS Products and/or (ii) to enable transfer of Content from a personal computer running the OS Products to an external portable playback device (“your applications"). You are not licensed to use, and shall not use, the software except in connection with the Windows platform.  This software does not provide the functionality to manipulate ASF Content protected with DRM.  To acquire the necessary components and license, please visit http://go.microsoft.com/fwlink/?LinkId=74559 for more information.
+
+b.	Included Microsoft Programs.  The software contains other Microsoft programs.  These license terms apply to your use of those programs.
+
+c.	Reproduction of the Software.  If you have multiple validly-licensed copies of an applicable Microsoft operating system software, you may reproduce, install and use one copy of the software on each of your computers that is running a validly licensed copy of the applicable Microsoft operating system software, so long as you use the additional copies of the software in accordance with this license agreement.
+
+3.	ADDITIONAL LICENSING REQUIREMENTS AND/OR USE RIGHTS.
+
+a.	Distributable Code.  The software contains code that you are permitted to distribute in programs you develop if you comply with the terms below.
+
+i.	Right to Use and Distribute.  The code and text files listed below are “Distributable Code.”
+•	Redistributable Components.  You may copy and distribute the object code form of code located in the "\redist" directory installed by the software, including any updates that may be provided ("Redistributable Components") as part of your application.
+•	Sample Code.  You may modify, copy, and distribute the source and object code form of code located in the "\samples" and "\include" directories installed by the software, including any updates that may be provided ("Sample Source") to develop your application.  
+•	Third Party Distribution.  	You agree not to permit further distribution of the Distributable Code by your end users except you may permit further redistribution of the Distributable Code by your distributors to your end-user customers if your distributors distribute the Distributable Code only in conjunction with, and as part of, your application.
+
+ii.	Distribution Requirements.  For any Distributable Code you distribute, you must
+•	distribute the Distributable Code only in conjunction with, and as a part of, your application and in object code form only;
+•	add significant primary functionality to it in your programs;
+•	require distributors and external end users to agree to terms that protect it at least as much as this agreement; 
+•	only distribute Distributable Code which operates in conjunction with the Microsoft operating system software; 
+•	include in the About Box for your application (or if there is no About Box, in another location that end users can easily discover and read), a copyright notice which states the following:  “Portions utilize Microsoft Windows Media Technologies.  Copyright ©2006 Microsoft Corporation.  All Rights Reserved.”
+•	display your valid copyright notice on your programs; and
+•	indemnify, defend, and hold harmless Microsoft from any claims, including attorneys’ fees, related to the distribution or use of your programs.
+•	In addition, for any Redistributable Components you distribute, you must:
+•	distribute the Redistributable Components in its entirety; 
+•	use the set-up and installation component of the Redistributable Components (the “Installer”) to install the Redistributable Components.  The Installer will not function if the operating system on which it is running requires a more current version of the Redistributable Components; and
+•	contact Microsoft for the applicable licensing terms for all other uses and/or distribution of the Redistributable Components.
+
+iii.	Distribution Restrictions.  You may not
+•	alter any copyright, trademark or patent notice in the Distributable Code; 
+•	use Microsoft’s trademarks in your programs’ names or in a way that suggests your programs come from or are endorsed by Microsoft; 
+•	distribute Distributable Code to run on a platform other than the Windows platform;
+•	include Distributable Code in malicious, deceptive or unlawful programs; or
+•	modify or distribute the source code of any Distributable Code so that any part of it becomes subject to an Excluded License.  An Excluded License is one that requires, as a condition of use, modification or distribution, that
+•	the code be disclosed or distributed in source code form; or 
+•	others have the right to modify it.
+
+b.	NOTICE ABOUT THE VC-1 VISUAL STANDARD.  This software may include VC-1 visual decoding technology.  MPEG LA, L.L.C. requires this notice:
+THIS PRODUCT IS LICENSED UNDER THE VC-1 PATENT PORTFOLIO LICENSES FOR THE PERSONAL AND NON-COMMERCIAL USE OF A CONSUMER TO (A) ENCODE VIDEO IN COMPLIANCE WITH THE VC-1 STANDARD ("VC-1 VIDEO") OR (B) DECODE VC-1 VIDEO THAT WAS ENCODED BY A CONSUMER ENGAGED IN A PERSONAL AND NON-COMMERCIAL ACTIVITY AND/OR WAS OBTAINED FROM A VIDEO PROVIDER LICENSED TO PROVIDE VC-1 VIDEO.  NO LICENSE IS GRANTED OR SHALL BE IMPLIED FOR ANY OTHER USE.  If you have questions about the VC-1 visual standard, please contact MPEG LA, L.L.C., 250 Steele Street, Suite 300, Denver, Colorado 80206; http://www.mpegla.com. 
+
+c.	NOTICE ABOUT THE MPEG-4 VISUAL STANDARD.  This software includes MPEG-4 visual decoding technology.  This technology is a format for data compression of video information.  For this technology, MPEG LA, L.L.C. requires this notice:
+USE OF THIS PRODUCT IN ANY MANNER THAT COMPLIES WITH THE MPEG-4 VISUAL STANDARD IS PROHIBITED, EXCEPT FOR USE DIRECTLY RELATED TO (A) DATA OR INFORMATION (i) GENERATED BY AND OBTAINED WITHOUT CHARGE FROM A CONSUMER NOT THEREBY ENGAGED IN A BUSINESS ENTERPRISE, AND (ii) FOR PERSONAL USE ONLY; AND (B) OTHER USES SPECIFICALLY AND SEPARATELY LICENSED BY MPEG LA, L.L.C.  If you have questions regarding these notices, please contact MPEG LA, L.L.C., 250 Steele Street, Suite 300, Denver, Colorado 80206; Telephone 303 331.1880; FAX 303 331.1879; http://www.mpegla.com
+
+d.	Windows Media Interoperability.  To promote interoperability with legacy and future solutions built on Windows Media technologies, Microsoft recommends that your application follow these guidelines: (i) if your application saves to permanent storage, writes to a network, or otherwise exports Content compressed with WM Codecs, such Content should be contained within ASF; (ii) if your application creates ASF Files, or registers for any file types or MIME types associated with ASF Files, your application should adhere to the ASF File naming and registration conventions posted on the http://go.microsoft.com/fwlink/?LinkId=11652 web site; and (iii) if your application creates WM Metafiles, or registers for any file types or MIME types associated with WM Metafiles, your application should adhere to the WM Metafile naming and registration conventions posted on the http://go.microsoft.com/fwlink/?LinkId=11653 web site.
+
+e.	WM Metafile Alterations. Except as authorized in writing by the original provider of a WM Metafile, your application shall not (i) alter the end user playback experience indicated by such WM Metafile; (ii) alter or ignore Content specified by such WM Metafile; or (iii) present additional Content to the end user that was not originally specified in such WM Metafile. 
+
+f.	ACELP.net Codec.  If your application uses the ACELP.net Codec, your use of the ACELP.net Codec is governed by the license agreement under which you acquired the codec.  "ACELP.net Codec" means the Algebraic Code Excited Linear Prediction vocoder software, algorithms and intellectual property of VoiceAge Corporation.
+
+g.	Invoking the Software.  Your application will invoke the software only via interfaces described in the documentation for the software.
+
+h.	Upgrades and Successor Versions.  Microsoft may, at its option, make upgrades and/or successor versions of the software available by general posting on a Microsoft website.  Microsoft may make non-beta versions of such upgrades and/or successor versions of the software ("Upgrades") available pursuant to the terms of this license agreement or, in Microsoft’s sole discretion, Microsoft may condition the release of such Upgrades to you upon your acceptance of another license agreement or other execution of a separate agreement.  You agree that all new versions of your application(s) released more than ninety (90) days after Microsoft’s release of an Upgrade will incorporate the Upgrade.
+
+4.	SCOPE OF LICENSE.  The software is licensed, not sold. This agreement only gives you some rights to use the software.  Microsoft reserves all other rights.  Unless applicable law gives you more rights despite this limitation, you may use the software only as expressly permitted in this agreement.  In doing so, you must comply with any technical limitations in the software that only allow you to use it in certain ways.    You may not
+•	work around any technical limitations in the software;
+•	reverse engineer, decompile or disassemble the software, except and only to the extent that applicable law expressly permits, despite this limitation;
+•	use the software, in whole or in part, to create or develop any program or application that provides access to and/or displays Content secured using digital rights management technology without separate permission from Microsoft;
+•	make more copies of the software than specified in this agreement or allowed by applicable law, despite this limitation;
+•	publish the software for others to copy;
+•	rent, lease or lend the software;
+•	transfer the software or this agreement to any third party; 
+•	use the software for commercial software hosting services; or
+•	alter any component of the software except for the Sample Source.
+5.	BACKUP COPY.  You may make one backup copy of the software.  You may use it only to reinstall the software.
+
+6.	DOCUMENTATION.  Any person that has valid access to your computer or internal network may copy and use the documentation for your internal, reference purposes.
+
+7.	TRANSFER TO ANOTHER DEVICE.  You may uninstall the software and install it on another device for your use.  You may not do so to share this license between devices.
+
+8.	EXPORT RESTRICTIONS.  The software is subject to United States export laws and regulations.  You must comply with all domestic and international export laws and regulations that apply to the software.  These laws include restrictions on destinations, end users and end use.  For additional information, see www.microsoft.com/exporting.
+
+9.	SUPPORT SERVICES. Because this software is “as is,” we may not provide support services for it.  If Microsoft should provide you with support services, use of such support services is governed by the Microsoft policies and programs described in the user manual, in "on line" documentation and/or other Microsoft-provided materials.  Any supplemental software code provided to you as part of the support services shall be considered part of the software and subject to the terms and conditions of this license agreement. With respect to technical information you provide to Microsoft as part of the support services, Microsoft may use such information for its business purposes, including for product support and development. Microsoft will not utilize such technical information in a form that personally identifies you.
+
+10.	ENTIRE AGREEMENT.  This agreement, and the terms for supplements, updates, Internet-based services and support services that you use, are the entire agreement for the software and support services.
+
+11.	Applicable Law.
+a.	United States.  If you acquired the software in the United States, Washington state law governs the interpretation of this agreement and applies to claims for breach of it, regardless of conflict of laws principles.  The laws of the state where you live govern all other claims, including claims under state consumer protection laws, unfair competition laws, and in tort.
+b.	Outside the United States.  If you acquired the software in any other country, the laws of that country apply.
+
+12.	LEGAL EFFECT.  This agreement describes certain legal rights.  You may have other rights under the laws of your country.  You may also have rights with respect to the party from whom you acquired the software.  This agreement does not change your rights under the laws of your country if the laws of your country do not permit it to do so.
+
+13.	Disclaimer of Warranty.   The software is licensed “as-is.”  You bear the risk of using it.  Microsoft gives no express warranties, guarantees or conditions.  You may have additional consumer rights under your local laws which this agreement cannot change.  To the extent permitted under your local laws, Microsoft excludes the implied warranties of merchantability, fitness for a particular purpose and non-infringement.
+
+14.	Limitation on and Exclusion of Remedies and Damages.  You can recover from Microsoft and its suppliers only direct damages up to U.S. $5.00.  You cannot recover any other damages, including consequential, lost profits, special, indirect or incidental damages.
+This limitation applies to
+•	anything related to the software, services, content (including code) on third party Internet sites, or third party programs; and
+•	claims for breach of contract, breach of warranty, guarantee or condition, strict liability, negligence, or other tort to the extent permitted by applicable law.
+
+It also applies even if Microsoft knew or should have known about the possibility of the damages.  The above limitation or exclusion may not apply to you because your country may not allow the exclusion or limitation of incidental, consequential or other damages.
+
+Please note: As this software is distributed in Quebec, Canada, some of the clauses in this agreement are provided below in French.
+
+
+Remarque : Ce logiciel étant distribué au Québec, Canada, certaines des clauses dans ce contrat sont fournies ci-dessous en français.
+EXONÉRATION DE GARANTIE. Le logiciel visé par une licence est offert « tel quel ». Toute utilisation de ce logiciel est à votre seule risque et péril. Microsoft n’accorde aucune autre garantie expresse. Vous pouvez bénéficier de droits additionnels en vertu du droit local sur la protection des consommateurs, que ce contrat ne peut modifier. La ou elles sont permises par le droit locale, les garanties implicites de qualité marchande, d’adéquation à un usage particulier et d’absence de contrefaçon sont exclues.
+LIMITATION DES DOMMAGES-INTÉRÊTS ET EXCLUSION DE RESPONSABILITÉ POUR LES DOMMAGES.  Vous pouvez obtenir de Microsoft et de ses fournisseurs une indemnisation en cas de dommages directs uniquement à hauteur de 5,00 $ US. Vous ne pouvez prétendre à aucune indemnisation pour les autres dommages, y compris les dommages spéciaux, indirects ou accessoires et pertes de bénéfices.
+
+Cette limitation concerne :
+•	tout  ce qui est relié au logiciel, aux services ou au contenu (y compris le code) figurant sur des sites Internet tiers ou dans des programmes tiers ; et
+•	les réclamations au titre de violation de contrat ou de garantie, ou au titre de responsabilité stricte, de négligence ou d’une autre faute dans la limite autorisée par la loi en vigueur.
+Elle s’applique également, même si Microsoft connaissait ou devrait connaître l’éventualité d’un tel dommage.  Si votre pays n’autorise pas l’exclusion ou la limitation de responsabilité pour les dommages indirects, accessoires ou de quelque nature que ce soit, il se peut que la limitation ou l’exclusion ci-dessus ne s’appliquera pas à votre égard.
+EFFET JURIDIQUE.  Le présent contrat décrit certains droits juridiques. Vous pourriez avoir d’autres droits prévus par les lois de votre pays.  Le présent contrat ne modifie pas les droits que vous confèrent les lois de votre pays si celles-ci ne le permettent pas.

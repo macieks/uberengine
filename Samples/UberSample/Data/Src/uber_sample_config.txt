@@ -1,0 +1,18 @@
+// Automatically generated
+
+set debug_menu.background_transparency 0.800000
+set debug_menu.text_transparency 1.000000
+set settings.msaa 4
+set settings.resolution "800x600"
+set stats.show_profiler false
+set settings.frequency 60
+set stats.show_warnings false
+set stats.show_fps false
+set settings.audio_volume 8
+set stats.show_mem false
+set stats.profiler_capture_freq 0.100000
+set stats.show_resources false
+set stats.show_profiler_graph false
+set stats.profiler_capture_pause false
+set settings.fullscreen false
+set debug_menu.draw_scale 1.000000

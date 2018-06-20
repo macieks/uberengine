@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assets>
+
+  <!-- Debug textures -->
+
+  <asset name="common/default_texture"/>
+  <asset name="common/cursor_texture"/>
+  
+  <!-- Debug models -->
+
+  <asset name="common/default_model"/>
+
+  <!-- Debug shaders -->
+
+  <asset name="common/pos_no_transform_vs"/>
+  <asset name="common/pos_tex_no_transform_vs"/>
+  <asset name="common/pos_col_vs"/>
+  <asset name="common/pos_col_fs"/>
+  <asset name="common/pos_tex_vs"/>
+  <asset name="common/pos_tex_fs"/>
+  <asset name="common/pos_col_tex_vs"/>
+  <asset name="common/pos_col_tex_fs"/>
+
+  <!-- Sprites -->
+
+  <asset name="common/sprite_vs"/>
+  <asset name="common/sprite_fs"/>
+  <asset name="common/animated_sprite_fs"/>
+
+  <!-- Depth only -->
+
+  <asset name="common/depth_view_space_vs"/>
+  <asset name="common/depth_view_space_fs"/>
+
+  <!-- Font shaders -->
+  
+  <asset name="common/font_vs"/>
+  <asset name="common/font_fs"/>
+
+  <!-- 3D model shaders -->
+
+  <asset name="common/model_vs"/>
+  <asset name="common/model_skinned_vs"/>
+  <asset name="common/model_fs"/>
+
+  <!-- particles -->
+
+  <asset name="common/particle_default_fs"/>
+  <asset name="common/particle_quad_vs"/>
+
+  <!-- Debug fonts -->
+
+  <asset name="common/font"/>
+  <asset name="common/debug_font"/>
+
+</assets>

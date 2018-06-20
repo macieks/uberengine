@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDesc parent="AssetDefs/shader">
+  <ParamGroup name="all">
+    <Param name="source" value="RTS/RTS.fx"/>
+    <Param name="entry" value="ModelSkinned_VS"/>
+    <Param name="shaderType" value="vertex"/>
+  </ParamGroup>
+</AssetDesc>

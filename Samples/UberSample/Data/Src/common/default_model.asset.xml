@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="asset_defs/model">
+  <paramGroup name="all">
+    <param name="source" value="common/default_model.obj"/>
+  </paramGroup>
+</asset>

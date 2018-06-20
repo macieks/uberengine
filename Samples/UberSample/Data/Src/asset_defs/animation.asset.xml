@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="" type="animation">
+  <paramGroup name="all">
+    <param name="source"/>
+    <param name="minFrequency" value="0.1"/>
+    <param name="timeScale" value="1.0"/>
+  </paramGroup>
+  <paramGroup name="win32">
+    <param name="compiler" value="AnimationCompiler_Assimp.exe"/>
+  </paramGroup>
+  <paramGroup name="linux">
+    <param name="compiler" value="AnimationCompiler_Assimp.run"/>
+  </paramGroup>
+  <paramGroup name="x360">
+    <param name="compiler" value="AnimationCompiler_Assimp_X360.exe"/>
+  </paramGroup>
+  <paramGroup name="ps3">
+    <param name="compiler" value="AnimationCompiler_Assimp_PS3.exe"/>
+  </paramGroup>
+</asset>

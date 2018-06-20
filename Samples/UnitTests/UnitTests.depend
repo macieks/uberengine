@@ -1,0 +1,361 @@
+# depslib dependency file v1.0
+1286443040 source:/windows/projects/UE/Samples/UnitTests/UnitTest_Env.cpp
+	"Utils/Env.h"
+
+1286186108 /windows/projects/UE/Src/Engine/Utils/Env.h
+	"Math/Math.h"
+
+1286337346 /windows/projects/UE/Src/Engine/Math/Math.h
+	"Base/Base.h"
+	<d3dx9.h>
+	"Math/Math_D3DX.h"
+	"Math/Math_XM.h"
+
+1286179732 /windows/projects/UE/Src/Engine/Base/Base.h
+	"Base/Platform.h"
+	"Base/AppConfig.h"
+	"Base/BasicTypes.h"
+	"Base/Debug.h"
+	"Base/Logger.h"
+	"Base/Callstack.h"
+	"Base/Allocator.h"
+	"Base/NewDelete.h"
+	"Base/Endianess.h"
+	"Base/BasicMath.h"
+	"Base/BasicUtils.h"
+	"Base/Str.h"
+	"Base/DateTime.h"
+	"Base/App.h"
+	"Base/Profiler.h"
+
+1286341074 /windows/projects/UE/Src/Engine/Base/Platform.h
+	<winsock2.h>
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<string.h>
+	<unistd.h>
+	<pthread.h>
+	<errno.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<string.h>
+	<unistd.h>
+	<errno.h>
+
+1286339192 /windows/projects/UE/Src/Engine/Base/AppConfig.h
+	"Base/Platform.h"
+
+1286327494 /windows/projects/UE/Src/Engine/Base/BasicTypes.h
+
+1286443046 /windows/projects/UE/Src/Engine/Base/Debug.h
+
+1286327286 /windows/projects/UE/Src/Engine/Base/Logger.h
+
+1286270066 /windows/projects/UE/Src/Engine/Base/Callstack.h
+
+1286179680 /windows/projects/UE/Src/Engine/Base/Allocator.h
+	"Base/Base.h"
+	"Threading/Mutex.h"
+
+1286341008 /windows/projects/UE/Src/Engine/Threading/Mutex.h
+
+1286331976 /windows/projects/UE/Src/Engine/Base/NewDelete.h
+	<new>
+
+1286327010 /windows/projects/UE/Src/Engine/Base/Endianess.h
+
+1286343356 /windows/projects/UE/Src/Engine/Base/BasicMath.h
+	<math.h>
+	<float.h>
+
+1286343812 /windows/projects/UE/Src/Engine/Base/BasicUtils.h
+
+1286338970 /windows/projects/UE/Src/Engine/Base/Str.h
+
+1286179864 /windows/projects/UE/Src/Engine/Base/DateTime.h
+
+1286179710 /windows/projects/UE/Src/Engine/Base/App.h
+	"Base/Base.h"
+
+1286327494 /windows/projects/UE/Src/Engine/Base/Profiler.h
+	"Base/Base.h"
+
+1284376028 /windows/projects/UE/Src/Engine/Math/Math_D3DX.h
+
+1286439625 source:/windows/projects/UE/Samples/UnitTests/UnitTest_HashMap.cpp
+	"Containers/HashMap.h"
+	"Utils/Rand.h"
+
+1286327494 /windows/projects/UE/Src/Engine/Containers/HashMap.h
+	"Base/Hash.h"
+	"Base/Cmp.h"
+	"Containers/GenericPool.h"
+
+1286327494 /windows/projects/UE/Src/Engine/Base/Hash.h
+	"Base/Base.h"
+
+1286179848 /windows/projects/UE/Src/Engine/Base/Cmp.h
+	"Base/Base.h"
+
+1286438587 /windows/projects/UE/Src/Engine/Containers/GenericPool.h
+	"Base/Base.h"
+
+1286186144 /windows/projects/UE/Src/Engine/Utils/Rand.h
+	"Base/Base.h"
+
+1286443933 source:/windows/projects/UE/Samples/UnitTests/UnitTest_JobSys.cpp
+	"Threading/JobSys.h"
+
+1286186822 /windows/projects/UE/Src/Engine/Threading/JobSys.h
+	"Base/Base.h"
+	"Threading/Thread.h"
+	"Threading/SyncEvent.h"
+
+1286440769 /windows/projects/UE/Src/Engine/Threading/Thread.h
+
+1286445578 /windows/projects/UE/Src/Engine/Threading/SyncEvent.h
+	<semaphore.h>
+
+1284114676 source:/windows/projects/UE/Samples/UnitTests/UnitTest_List.cpp
+	"Containers/List.h"
+
+1286185956 /windows/projects/UE/Src/Engine/Containers/List.h
+	"Base/Base.h"
+
+1286344330 source:/windows/projects/UE/Samples/UnitTests/UnitTest_Memory.cpp
+	"Memory/BestFitAllocator.h"
+
+1286186920 /windows/projects/UE/Src/Engine/Memory/BestFitAllocator.h
+	"Base/Base.h"
+	"Containers/GenericPool.h"
+	"Containers/RedBlackTreeMap.h"
+
+1286185996 /windows/projects/UE/Src/Engine/Containers/RedBlackTreeMap.h
+	"Base/Cmp.h"
+	"Containers/GenericPool.h"
+
+1279708664 source:/windows/projects/UE/Samples/UnitTests/UnitTest_RedBlackTreeSet.cpp
+	"Containers/RedBlackTreeSet.h"
+	"Utils/Rand.h"
+
+1286186014 /windows/projects/UE/Src/Engine/Containers/RedBlackTreeSet.h
+	"Base/Cmp.h"
+	"Containers/GenericPool.h"
+
+1285380290 source:/windows/projects/UE/Samples/UnitTests/UnitTest_Script.cpp
+	"Script/scLib.h"
+
+1285371636 /windows/projects/UE/Src/Engine/Script/scLib.h
+	"Base/Base.h"
+
+1286347666 source:/windows/projects/UE/Samples/UnitTests/main.cpp
+	"Base/Base.h"
+	"Utils/Rand.h"
+	"Memory/MallocAllocator.h"
+	"IO/ioFileSys.h"
+
+1286188458 /windows/projects/UE/Src/Engine/Memory/MallocAllocator.h
+	"Base/Base.h"
+
+1286327494 /windows/projects/UE/Src/Engine/IO/ioFileSys.h
+	"Threading/JobSys.h"
+
+1286618993 source:/fun/FUN/projects/UE/Samples/UnitTests/UnitTest_Env.cpp
+	"Utils/Env.h"
+
+1286186108 /fun/FUN/projects/UE/Src/Engine/Utils/Env.h
+	"Math/Math.h"
+
+1286617628 /fun/FUN/projects/UE/Src/Engine/Math/Math.h
+	"Base/Base.h"
+	<d3dx9.h>
+	"../../SDKs/WineD3DX/d3dx9math.h"
+	"Math/Math_D3DX.h"
+	"Math/Math_XM.h"
+	"Math/Math_My.h"
+
+1286179732 /fun/FUN/projects/UE/Src/Engine/Base/Base.h
+	"Base/Platform.h"
+	"Base/AppConfig.h"
+	"Base/BasicTypes.h"
+	"Base/Debug.h"
+	"Base/Logger.h"
+	"Base/Callstack.h"
+	"Base/Allocator.h"
+	"Base/NewDelete.h"
+	"Base/Endianess.h"
+	"Base/BasicMath.h"
+	"Base/BasicUtils.h"
+	"Base/Str.h"
+	"Base/DateTime.h"
+	"Base/App.h"
+	"Base/Profiler.h"
+
+1286341074 /fun/FUN/projects/UE/Src/Engine/Base/Platform.h
+	<winsock2.h>
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<string.h>
+	<unistd.h>
+	<pthread.h>
+	<errno.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<string.h>
+	<unistd.h>
+	<errno.h>
+
+1286612023 /fun/FUN/projects/UE/Src/Engine/Base/AppConfig.h
+	"Base/Platform.h"
+
+1286327494 /fun/FUN/projects/UE/Src/Engine/Base/BasicTypes.h
+
+1286443046 /fun/FUN/projects/UE/Src/Engine/Base/Debug.h
+
+1286327286 /fun/FUN/projects/UE/Src/Engine/Base/Logger.h
+
+1286270066 /fun/FUN/projects/UE/Src/Engine/Base/Callstack.h
+
+1286179680 /fun/FUN/projects/UE/Src/Engine/Base/Allocator.h
+	"Base/Base.h"
+	"Threading/Mutex.h"
+
+1286341008 /fun/FUN/projects/UE/Src/Engine/Threading/Mutex.h
+
+1286331976 /fun/FUN/projects/UE/Src/Engine/Base/NewDelete.h
+	<new>
+
+1286327010 /fun/FUN/projects/UE/Src/Engine/Base/Endianess.h
+
+1286343356 /fun/FUN/projects/UE/Src/Engine/Base/BasicMath.h
+	<math.h>
+	<float.h>
+
+1286343812 /fun/FUN/projects/UE/Src/Engine/Base/BasicUtils.h
+
+1286338970 /fun/FUN/projects/UE/Src/Engine/Base/Str.h
+
+1286179864 /fun/FUN/projects/UE/Src/Engine/Base/DateTime.h
+
+1286179710 /fun/FUN/projects/UE/Src/Engine/Base/App.h
+	"Base/Base.h"
+
+1286327494 /fun/FUN/projects/UE/Src/Engine/Base/Profiler.h
+	"Base/Base.h"
+
+1286617448 /fun/FUN/projects/UE/Src/Engine/Math/Math_D3DX.h
+
+1286439624 source:/fun/FUN/projects/UE/Samples/UnitTests/UnitTest_HashMap.cpp
+	"Containers/HashMap.h"
+	"Utils/Rand.h"
+
+1286327494 /fun/FUN/projects/UE/Src/Engine/Containers/HashMap.h
+	"Base/Hash.h"
+	"Base/Cmp.h"
+	"Containers/GenericPool.h"
+
+1286327494 /fun/FUN/projects/UE/Src/Engine/Base/Hash.h
+	"Base/Base.h"
+
+1286179848 /fun/FUN/projects/UE/Src/Engine/Base/Cmp.h
+	"Base/Base.h"
+
+1286438586 /fun/FUN/projects/UE/Src/Engine/Containers/GenericPool.h
+	"Base/Base.h"
+
+1286186144 /fun/FUN/projects/UE/Src/Engine/Utils/Rand.h
+	"Base/Base.h"
+
+1286687878 source:/fun/FUN/projects/UE/Samples/UnitTests/UnitTest_JobSys.cpp
+	"Threading/JobSys.h"
+
+1286186822 /fun/FUN/projects/UE/Src/Engine/Threading/JobSys.h
+	"Base/Base.h"
+	"Threading/Thread.h"
+	"Threading/SyncEvent.h"
+
+1286440768 /fun/FUN/projects/UE/Src/Engine/Threading/Thread.h
+
+1286589501 /fun/FUN/projects/UE/Src/Engine/Threading/SyncEvent.h
+	<semaphore.h>
+
+1284114676 source:/fun/FUN/projects/UE/Samples/UnitTests/UnitTest_List.cpp
+	"Containers/List.h"
+
+1286185956 /fun/FUN/projects/UE/Src/Engine/Containers/List.h
+	"Base/Base.h"
+
+1286344330 source:/fun/FUN/projects/UE/Samples/UnitTests/UnitTest_Memory.cpp
+	"Memory/BestFitAllocator.h"
+
+1286186920 /fun/FUN/projects/UE/Src/Engine/Memory/BestFitAllocator.h
+	"Base/Base.h"
+	"Containers/GenericPool.h"
+	"Containers/RedBlackTreeMap.h"
+
+1286185996 /fun/FUN/projects/UE/Src/Engine/Containers/RedBlackTreeMap.h
+	"Base/Cmp.h"
+	"Containers/GenericPool.h"
+
+1279708664 source:/fun/FUN/projects/UE/Samples/UnitTests/UnitTest_RedBlackTreeSet.cpp
+	"Containers/RedBlackTreeSet.h"
+	"Utils/Rand.h"
+
+1286186014 /fun/FUN/projects/UE/Src/Engine/Containers/RedBlackTreeSet.h
+	"Base/Cmp.h"
+	"Containers/GenericPool.h"
+
+1286682933 source:/fun/FUN/projects/UE/Samples/UnitTests/main.cpp
+	"Base/Base.h"
+	"Utils/Rand.h"
+	"Memory/MallocAllocator.h"
+	"IO/ioFileSys.h"
+
+1286188458 /fun/FUN/projects/UE/Src/Engine/Memory/MallocAllocator.h
+	"Base/Base.h"
+
+1286327494 /fun/FUN/projects/UE/Src/Engine/IO/ioFileSys.h
+	"Threading/JobSys.h"
+
+1286609268 /fun/FUN/projects/UE/Src/Engine/Math/Math_My.h
+
+1285380290 source:/fun/FUN/projects/UE/Samples/UnitTests/UnitTest_Script.cpp
+	"Script/scLib.h"
+
+1285371636 /fun/FUN/projects/UE/Src/Engine/Script/scLib.h
+	"Base/Base.h"
+
+1286617203 /fun/FUN/projects/UE/SDKs/WineD3DX/d3dx9math.h
+	<math.h>
+	<string.h>
+	"d3dtypes.h"
+	"d3dx9math.inl"
+
+1286615953 /fun/FUN/projects/UE/SDKs/WineD3DX/d3dtypes.h
+	<windows.h>
+	<float.h>
+	<ddraw.h>
+	"d3dvec.inl"
+
+1285958804 /fun/FUN/projects/UE/SDKs/WineD3DX/d3dvec.inl
+
+1286617556 /fun/FUN/projects/UE/SDKs/WineD3DX/d3dx9math.inl
+
+1286683831 source:/fun/FUN/projects/UE/Samples/UnitTests/UnitTest_Compression.cpp
+	"Utils/Compression.h"
+
+1286186800 /fun/FUN/projects/UE/Src/Engine/Utils/Compression.h
+	"Base/Base.h"
+

@@ -1,0 +1,140 @@
+// Microsoft Visual C++ generated resource script.
+//
+//-----------------------------------------------------------------------------
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+//-----------------------------------------------------------------------------
+
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_WMVINAVI DIALOGEX 0, 0, 341, 257
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "WMV In AVI"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Start Encoding",ID_GO,261,153,59,14
+    PUSHBUTTON      "Exit",IDCANCEL,260,173,59,14
+    EDITTEXT        IDC_SOURCEFILE,7,19,177,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TARGETFILE,7,42,176,15,ES_AUTOHSCROLL
+    LTEXT           "Source File",IDC_STATIC,9,9,38,8
+    LTEXT           "Target File",IDC_STATIC,9,33,36,8
+    PUSHBUTTON      "Browse",IDC_BTN_SOURCEFILE,190,19,34,13
+    EDITTEXT        IDC_DESC,7,202,327,48,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    WS_VSCROLL
+    EDITTEXT        IDC_BITRATE,19,162,49,12,ES_AUTOHSCROLL
+    LTEXT           "Bitrate\n(0 - 24,000,000)",IDC_STATIC,73,160,60,19
+    LTEXT           "Buffer Window\n(1000 - 128,000)",IDC_STATIC,73,178,69,
+                    18
+    EDITTEXT        IDC_BUFFERDELAY,19,180,49,12,ES_AUTOHSCROLL
+    LTEXT           "Max Key Distance\nin Secs. (1 - 100)",IDC_STATIC,179,
+                    150,73,20
+    EDITTEXT        IDC_MAXKEYDISTANCE,150,152,22,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VBRQUALITY,104,79,48,12,ES_AUTOHSCROLL
+    LTEXT           "VBR Quality",IDC_STATIC,155,79,39,8
+    EDITTEXT        IDC_FRAMERATE,19,144,49,12,ES_AUTOHSCROLL
+    LTEXT           " Frame Rate\n (0.00 - 60.00)",IDC_STATIC,72,141,51,17
+    LISTBOX         IDC_PROFILES,210,115,48,12,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Requested\nDecoder Profile",IDC_STATIC,263,112,58,19
+    CONTROL         "CBR",IDC_CBR,"Button",BS_AUTORADIOBUTTON | WS_GROUP | 
+                    WS_TABSTOP,11,80,29,10
+    CONTROL         "Quality VBR (1 pass)",IDC_QUALITY_VBR,"Button",
+                    BS_AUTORADIOBUTTON,11,92,83,10
+    GROUPBOX        "Encoding Mode",IDC_STATIC,7,66,89,68
+    GROUPBOX        "VBR Settings",IDC_STATIC,97,66,106,68
+    EDITTEXT        IDC_QUALITY,210,79,48,12,ES_AUTOHSCROLL
+    LTEXT           "Quality\n(Crispness)",IDC_STATIC,264,75,40,20
+    LISTBOX         IDC_COMPLEXITY,210,97,48,12,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Encoder Complexity",IDC_STATIC,263,95,58,19
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_WMVINAVI, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 334
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 250
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<query>
+  <inputs>
+    <input name="start_rank" type="s32"/>
+    <input name="max_count" type="s32"/>
+  </inputs>
+  <outputs>
+    <output name="rank" type="s32"/>
+    <output name="bestTime" type="s32"/>
+    <output name="userName" type="string"/>
+  </outputs>
+</query>

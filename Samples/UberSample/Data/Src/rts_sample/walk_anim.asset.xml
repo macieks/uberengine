@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="asset_defs/animation">
+  <paramGroup name="all">
+    <param name="source" value="rts_sample/dwarf1.x"/>
+    <param name="timeScale" value="0.0004"/>
+    <param name="minFrequency" value="0.1"/>
+    <param name="startFrame" value="1"/>
+    <param name="numFrames" value="7"/>
+  </paramGroup>
+</asset>

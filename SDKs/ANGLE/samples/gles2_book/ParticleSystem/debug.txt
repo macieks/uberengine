@@ -1,0 +1,89 @@
+trace: gl::Context::makeCurrent(281): MaxTextureDimension=16384, MaxCubeTextureDimension=16384, MaxRenderbufferDimension=16384, MaxTextureLevel=15, MaxTextureAnisotropy=16.000000
+trace: gl::ProgramBinary::compileToBinary(1077): 
+float4 vec4(float4 x0)
+{
+    return float4(x0);
+}
+// Varyings
+static float _v_lifetime = {0};
+
+static float4 gl_Color[1] = {float4(0, 0, 0, 0)};
+static float2 gl_PointCoord = float2(0.5, 0.5);
+
+
+uniform sampler2D _s_texture;
+uniform float4 _u_color;
+
+float4 gl_texture2D(sampler2D s, float2 t)
+{
+    return tex2D(s, t);
+}
+
+#define GL_USES_POINT_COORD
+;
+;
+;
+void gl_main()
+{
+{
+float4 _texColor = {0, 0, 0, 0};
+(_texColor = gl_texture2D(_s_texture, gl_PointCoord));
+(gl_Color[0] = (vec4(_u_color) * _texColor));
+(gl_Color[0][3] *= _v_lifetime);
+}
+}
+;
+struct PS_INPUT
+{
+    float4 v0 : COLOR0;
+    float2 gl_PointCoord : TEXCOORD0;
+};
+
+struct PS_OUTPUT
+{
+    float4 gl_Color[1] : COLOR;
+};
+
+PS_OUTPUT main(PS_INPUT input)
+{
+    gl_PointCoord.x = input.gl_PointCoord.x;
+    gl_PointCoord.y = 1.0 - input.gl_PointCoord.y;
+    _v_lifetime = input.v0;
+
+    gl_main();
+
+    PS_OUTPUT output;
+    output.gl_Color[0] = gl_Color[0];
+
+    return output;
+}
+
+trace: gl::ProgramBinary::compileToBinary(1078): 
+C:\fakepath(49,17): warning X3206: implicit truncation of vector type
+
+trace: error(163): 	! Error generated: invalid operation
+
+trace: error(163): 	! Error generated: invalid operation
+
+trace: error(163): 	! Error generated: invalid operation
+
+trace: error(163): 	! Error generated: invalid operation
+
+trace: error(163): 	! Error generated: invalid operation
+
+trace: error(163): 	! Error generated: invalid operation
+
+trace: error(163): 	! Error generated: invalid operation
+
+trace: error(163): 	! Error generated: invalid operation
+
+trace: error(163): 	! Error generated: invalid operation
+
+trace: error(163): 	! Error generated: invalid operation
+
+trace: error(163): 	! Error generated: invalid operation
+
+trace: error(163): 	! Error generated: invalid operation
+
+trace: error(155): 	! Error generated: invalid enum
+

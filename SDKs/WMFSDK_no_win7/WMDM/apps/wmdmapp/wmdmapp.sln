@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wmdmapp", "wmdmapp.vcproj", "{34984E85-9E40-46DA-A365-79A3A0B6FA24}"
+	ProjectSection(ProjectDependencies) = postProject
+		{747C9CD5-1B84-41B8-81EF-58C6AA523238} = {747C9CD5-1B84-41B8-81EF-58C6AA523238}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "proghelp", "..\proghelp\proghelp.vcproj", "{747C9CD5-1B84-41B8-81EF-58C6AA523238}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34984E85-9E40-46DA-A365-79A3A0B6FA24}.Debug|Win32.ActiveCfg = Debug|Win32
+		{34984E85-9E40-46DA-A365-79A3A0B6FA24}.Debug|Win32.Build.0 = Debug|Win32
+		{34984E85-9E40-46DA-A365-79A3A0B6FA24}.Release|Win32.ActiveCfg = Release|Win32
+		{34984E85-9E40-46DA-A365-79A3A0B6FA24}.Release|Win32.Build.0 = Release|Win32
+		{747C9CD5-1B84-41B8-81EF-58C6AA523238}.Debug|Win32.ActiveCfg = Debug|Win32
+		{747C9CD5-1B84-41B8-81EF-58C6AA523238}.Debug|Win32.Build.0 = Debug|Win32
+		{747C9CD5-1B84-41B8-81EF-58C6AA523238}.Release|Win32.ActiveCfg = Release|Win32
+		{747C9CD5-1B84-41B8-81EF-58C6AA523238}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,6 @@
+// Automatically generated
+
+set my_bool true
+set my_string "some funny string"
+set my_int 7
+set my_float 4.600000

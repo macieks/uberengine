@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assets>
+
+  <asset name="postprocesses/pp_default_vs"/>
+ 
+  <asset name="postprocesses/pp_down2x2_vs"/>
+  <asset name="postprocesses/pp_down2x2_fs"/>
+
+  <asset name="postprocesses/pp_vertical_blur_fs"/>
+  <asset name="postprocesses/pp_horizontal_blur_fs"/>
+
+  <asset name="postprocesses/pp_bloom_composite_fs"/>
+
+  <asset name="postprocesses/pp_old_tv_dust_map"/>
+  <asset name="postprocesses/pp_old_tv_line_map"/>
+  <asset name="postprocesses/pp_old_tv_tv_and_noise_map"/>
+  <asset name="postprocesses/pp_old_tv_vs"/>
+  <asset name="postprocesses/pp_old_tv_fs"/>
+
+  <asset name="postprocesses/pp_depth_of_field_fs"/>
+
+  <asset name="postprocesses/pp_depth_of_field_hq_downsample_vs"/>
+  <asset name="postprocesses/pp_depth_of_field_hq_downsample_fs"/>
+  <asset name="postprocesses/pp_depth_of_field_hq_near_coc_fs"/>
+  <asset name="postprocesses/pp_depth_of_field_hq_small_blur_vs"/>
+  <asset name="postprocesses/pp_depth_of_field_hq_small_blur_fs"/>
+  <asset name="postprocesses/pp_depth_of_field_hq_composite_fs"/>
+
+  <asset name="postprocesses/pp_rainy_glass_droplet"/>
+  <asset name="postprocesses/pp_rainy_glass_evaporation_fs"/>
+  <asset name="postprocesses/pp_rainy_glass_distortion_fs"/>
+
+  <asset name="postprocesses/pp_camera_motion_blur_fs"/>
+
+</assets>

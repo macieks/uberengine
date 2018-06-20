@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="asset_defs/model_collada">
+  <paramGroup name="all">
+    <param name="source" value="model_sample/JaiquaFromXSI.dae"/>
+    <param name="makeStatic" value="false"/>
+  </paramGroup>
+</asset>

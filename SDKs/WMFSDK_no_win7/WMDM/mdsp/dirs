@@ -1,0 +1,5 @@
+DIRS= \
+    MsPMSP{MUI} \
+    MsPMSPsv{MUI} \
+    MsHDSP \
+    CEWMDM

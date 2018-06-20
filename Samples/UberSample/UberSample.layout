@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug Win32" />
+	<File name="Data/Src/uber_sample_assets.xml" open="0" top="0" tabpos="0">
+		<Cursor position="133" topLine="13" />
+	</File>
+	<File name="Src/Model/Sample_Model.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="2835" topLine="88" />
+	</File>
+	<File name="Src/Multiplayer/Sample_Multiplayer.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="2887" topLine="85" />
+	</File>
+	<File name="Src/SampleApp.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="7548" topLine="187" />
+	</File>
+</CodeBlocks_layout_file>

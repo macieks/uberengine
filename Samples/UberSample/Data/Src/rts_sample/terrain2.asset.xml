@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="asset_defs/texture">
+  <paramGroup name="all">
+    <param name="source" value="rts_sample/terrain2.png"/>
+    <param name="storage" value="GPU"/>
+    <param name="format" value="DXT1"/>
+    <param name="rescaleMethod" value="None"/>
+  </paramGroup>
+</asset>

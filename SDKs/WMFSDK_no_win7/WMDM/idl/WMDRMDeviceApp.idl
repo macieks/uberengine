@@ -1,0 +1,110 @@
+//
+//  Microsoft Windows Media Technologies
+//  Copyright (C) Microsoft Corporation, 1999 - 2003. All rights reserved.
+//
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+
+import "wmdm.idl";
+
+cpp_quote("// WMDRM Device status flags")
+cpp_quote("#define WMDRM_DEVICE_ISWMDRM                 0x00000001L")
+cpp_quote("#define WMDRM_DEVICE_NEEDCLOCK               0x00000002L")
+cpp_quote("#define WMDRM_DEVICE_REVOKED                 0x00000004L")
+cpp_quote("#define WMDRM_CLIENT_NEEDINDIV               0x00000008L")
+cpp_quote("#define WMDRM_DEVICE_REFRESHCLOCK            0x00000010L")
+
+
+cpp_quote("// WMDRM Query Device flags")
+cpp_quote("#define WMDRM_QUERY_DEVICE_ISWMDRM           0x00000001L")
+cpp_quote("#define WMDRM_QUERY_DEVICE_CLOCKSTATUS       0x00000002L")
+cpp_quote("#define WMDRM_QUERY_DEVICE_ISREVOKED         0x00000004L")
+cpp_quote("#define WMDRM_QUERY_CLIENT_INDIVSTATUS       0x00000008L")
+
+cpp_quote("// ProcessMeterResponse flags")
+cpp_quote("#define WMDRM_METER_RESPONSE_ALL             0x00000000L")
+cpp_quote("#define WMDRM_METER_RESPONSE_PARTIAL         0x00000001L")
+
+
+// IWMDRMDeviceApp
+[
+    object,
+    uuid(93AFDB44-B1E1-411d-B89B-75AD4F97882B),
+    pointer_default(unique)
+]
+interface IWMDRMDeviceApp : IUnknown
+{
+    HRESULT GenerateMeterChallenge(
+        [in]  IWMDMDevice    *pDevice,      // NULL == PC 
+        [in]  BSTR            bstrMeterCert,
+        [out] BSTR           *pbstrMeterURL,
+        [out] BSTR           *pbstrMeterData);
+    HRESULT ProcessMeterResponse(
+        [in]  IWMDMDevice    *pDevice,      // NULL == PC 
+        [in]  BYTE           *pbResponse,
+        [in]  DWORD           cbResponse,
+        [out] DWORD          *pdwFlags);    // flags defined above
+
+    // check if the specified device is indiv'ed 
+    HRESULT QueryDeviceStatus(
+        [in]  IWMDMDevice    *pDevice,
+        [out] DWORD          *pdwStatus);   // logical 'OR' of WMDRM status Flags defined above
+
+    // acquire devcert and/or secureclock for device
+    HRESULT AcquireDeviceData(
+        [in]  IWMDMDevice    *pDevice,
+        [in]  IWMDMProgress3 *pProgressCallback,
+        [in]  DWORD           dwFlags,      // logical 'OR' of WMDRM status Flags defined above
+        [out] DWORD          *pdwStatus);   // status returned by device.
+
+    HRESULT SynchronizeLicenses(
+        [in]  IWMDMDevice    *pDevice,
+        [in]  IWMDMProgress3 *pProgressCallback,
+        [in]  DWORD           cMinCountThreshold,
+        [in]  DWORD           cMinHoursThreshold);
+};
+
+
+// IWMDRMDeviceApp2
+[
+    object,
+    uuid(600D6E55-DEA5-4e4c-9C3A-6BD642A45B9D),
+    pointer_default(unique)
+]
+interface IWMDRMDeviceApp2 : IWMDRMDeviceApp
+{
+    // check if the specified device is indiv'ed 
+    HRESULT QueryDeviceStatus2(
+        [in]  IWMDMDevice    *pDevice,
+        [in]  DWORD           dwFlags,      // logical 'OR' of WMDRM Query Flags defined above
+        [out] DWORD          *pdwStatus);   // logical 'OR' of WMDRM status Flags defined above
+};
+
+
+#ifndef WMDRMDEVICEAPP_INTERFACE_DEFINED
+
+[
+    uuid(50BB7AB2-0498-450D-A2C3-81CC17FD154D),
+    version(1.0),
+    helpstring("WMDRMDeviceApp 1.0 Type Library")
+]
+
+library WMDRMDeviceAppLib
+{
+    importlib("stdole32.tlb");
+    importlib("stdole2.tlb");
+
+    [
+        uuid(5C140836-43DE-11d3-847D-00C04F79DBC0),
+        helpstring("WMDRMDeviceApp Class")
+    ]
+    coclass WMDRMDeviceApp
+    {
+        [default] interface IWMDRMDeviceApp2;
+                  interface IWMDRMDeviceApp;
+    };
+
+};
+#endif

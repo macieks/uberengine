@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="quake3_level_sample/quake3_level">
+  <paramGroup name="all">
+    <param name="source" value="quake3_level_sample/q3dm3.bsp"/>
+  </paramGroup>
+</asset>

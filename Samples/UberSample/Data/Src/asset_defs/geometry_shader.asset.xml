@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="asset_defs/shader">
+  <paramGroup name="win32-glsl">
+    <param name="profile" value="glslg"/>
+  </paramGroup>
+  <paramGroup name="linux-glsl">
+    <param name="profile" value="glslg"/>
+  </paramGroup>
+  <paramGroup name="win32-d3d11_sm40">
+    <param name="profile" value="gs_4_0"/>
+  </paramGroup>
+</asset>

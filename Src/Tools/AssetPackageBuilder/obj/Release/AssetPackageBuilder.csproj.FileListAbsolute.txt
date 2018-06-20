@@ -1,0 +1,5 @@
+C:\FUN\projects\Monstaaa\UE\Bin\Win32_Release\AssetPackageBuilder.exe
+C:\FUN\projects\Monstaaa\UE\Bin\Win32_Release\AssetPackageBuilder.pdb
+C:\FUN\projects\Monstaaa\UE\Src\Tools\AssetPackageBuilder\obj\Release\ResolveAssemblyReference.cache
+C:\FUN\projects\Monstaaa\UE\Src\Tools\AssetPackageBuilder\obj\Release\AssetPackageBuilder.exe
+C:\FUN\projects\Monstaaa\UE\Src\Tools\AssetPackageBuilder\obj\Release\AssetPackageBuilder.pdb

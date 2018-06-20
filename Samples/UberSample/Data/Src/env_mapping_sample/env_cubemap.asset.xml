@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="asset_defs/texture">
+  <paramGroup name="all">
+    <param name="source[0]" value="env_mapping_sample/inclouds_positive_x.png"/>
+    <param name="source[1]" value="env_mapping_sample/inclouds_negative_x.png"/>
+    <param name="source[2]" value="env_mapping_sample/inclouds_positive_y.png"/>
+    <param name="source[3]" value="env_mapping_sample/inclouds_negative_y.png"/>
+    <param name="source[4]" value="env_mapping_sample/inclouds_positive_z.png"/>
+    <param name="source[5]" value="env_mapping_sample/inclouds_negative_z.png"/>
+    <param name="format" value="DXT1"/>
+    <param name="textureType" value="Cube"/>
+  </paramGroup>
+</asset>

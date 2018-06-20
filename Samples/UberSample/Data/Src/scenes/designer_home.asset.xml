@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="asset_defs/model">
+  <paramGroup name="all">
+    <param name="source" value="scenes/designer_home.3ds"/>
+    <param name="makeStatic" value="true"/>
+	<param name="scale" value="0.1 0.1 0.1"/>
+  </paramGroup>
+</asset>

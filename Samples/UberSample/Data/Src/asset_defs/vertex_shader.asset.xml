@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="asset_defs/shader">
+  <paramGroup name="all">
+    <param name="tags" value="${base};test_tag"/>
+  </paramGroup>
+  <paramGroup name="linux-glsl">
+    <param name="profile" value="glslv"/>
+  </paramGroup>
+  <paramGroup name="win32-glsl">
+    <param name="profile" value="glslv"/>
+  </paramGroup>
+  <paramGroup name="win32-d3d9_sm30">
+    <param name="profile" value="vs_3_0"/>
+  </paramGroup>
+  <paramGroup name="win32-d3d9_sm20">
+    <param name="profile" value="vs_2_0"/>
+  </paramGroup>
+  <paramGroup name="win32-d3d9_sm14">
+    <param name="profile" value="vs_1_4"/>
+  </paramGroup>
+  <paramGroup name="win32-d3d11_sm40">
+    <param name="profile" value="vs_4_0"/>
+  </paramGroup>
+  <paramGroup name="x360">
+    <param name="profile" value="vs_3_0"/>
+  </paramGroup>
+  <paramGroup name="ps3">
+    <param name="profile" value="vs_3_0"/>
+  </paramGroup>
+  <paramGroup name="marmalade-gles">
+    <param name="profile" value="glslesv"/>
+  </paramGroup>
+  <paramGroup name="win32-gles">
+    <param name="profile" value="glslesv"/>
+  </paramGroup>
+</asset>

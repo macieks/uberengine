@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TexLib", "TexLib.vcproj", "{97C02FEA-6ABF-4A11-8275-5072C738FC7D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sample_OpenGL", "Sample_OpenGL.vcproj", "{AD9655EA-5355-4C41-A671-405E75F9BE6A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{97C02FEA-6ABF-4A11-8275-5072C738FC7D} = {97C02FEA-6ABF-4A11-8275-5072C738FC7D}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97C02FEA-6ABF-4A11-8275-5072C738FC7D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{97C02FEA-6ABF-4A11-8275-5072C738FC7D}.Debug|Win32.Build.0 = Debug|Win32
+		{97C02FEA-6ABF-4A11-8275-5072C738FC7D}.Release|Win32.ActiveCfg = Release|Win32
+		{97C02FEA-6ABF-4A11-8275-5072C738FC7D}.Release|Win32.Build.0 = Release|Win32
+		{AD9655EA-5355-4C41-A671-405E75F9BE6A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AD9655EA-5355-4C41-A671-405E75F9BE6A}.Debug|Win32.Build.0 = Debug|Win32
+		{AD9655EA-5355-4C41-A671-405E75F9BE6A}.Release|Win32.ActiveCfg = Release|Win32
+		{AD9655EA-5355-4C41-A671-405E75F9BE6A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

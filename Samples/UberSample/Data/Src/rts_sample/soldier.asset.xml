@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asset parent="asset_defs/model">
+  <paramGroup name="all">
+    <param name="source" value="rts_sample/dwarf1.x"/>
+    <param name="makeStatic" value="false"/>
+  </paramGroup>
+</asset>

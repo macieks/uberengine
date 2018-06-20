@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="UnitTest_Compression.cpp" open="0" top="0" tabpos="1">
+		<Cursor position="978" topLine="32" />
+	</File>
+	<File name="UnitTest_Env.cpp" open="0" top="0" tabpos="1">
+		<Cursor position="528" topLine="7" />
+	</File>
+	<File name="UnitTest_FileSys.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="UnitTest_HashMap.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="2615" topLine="97" />
+	</File>
+	<File name="UnitTest_JobSys.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="1896" topLine="48" />
+	</File>
+	<File name="UnitTest_List.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="0" topLine="51" />
+	</File>
+	<File name="UnitTest_Memory.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="991" topLine="29" />
+	</File>
+	<File name="UnitTest_Script.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="1844" topLine="49" />
+	</File>
+	<File name="main.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="365" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>

@@ -1,0 +1,17 @@
+Assimp - BSD?
+Box2D - Zlib
+Bullet - Zlib
+enet - BSD?
+FCollada - MIT
+LibXML2 - BSD
+ffmpeg - GPL
+FreeType2 - BSD like or GPL
+glew - BSD?
+NvTriStrip - ???
+NVTT - MIT
+PhysX - NVIDIA license
+Squirrel - Zlib
+WineD3DX - LGPL
+zlib - Zlib?
+zziplib - LGPL or Mozilla
+libRocket - MIT
