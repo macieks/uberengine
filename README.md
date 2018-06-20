@@ -1,6 +1,8 @@
 Uber Engine
 ===========
 
+NOTE: this project is dead and has not been tested in years; it's only here for historical reasons.
+
 C++ game engine designed with performance in mind.
 
 Features:
